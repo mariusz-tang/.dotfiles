@@ -11,6 +11,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # Load completions
+fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
