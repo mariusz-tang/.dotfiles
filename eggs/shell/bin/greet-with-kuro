@@ -1,0 +1,8 @@
+#!/usr/bin/zsh
+
+file_path=~/.config/zsh/kuro-greetings.txt
+# Use -f2 if greetings file has less than 10 lines because wc is weird.
+line_count=$(wc $file_path | cut -d" " -f2)
+line_num=$(($RANDOM % $line_count + 1))
+line=$(sed "${line_num}q;d" $file_path)
+figlet $line -f greeting-font -d ~/.config/zsh/

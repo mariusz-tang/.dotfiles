@@ -1,0 +1,9 @@
+#!/usr/bin/zsh
+
+file_path=~/.xsettingsd
+touch $file_path
+config=$(cat $file_path)
+echo $config | awk '!/Net\/ThemeName/ { print }' > $file_path
+echo "Net/ThemeName\t\t\"$1\"" >> $file_path
+killall -HUP xsettingsd
+
