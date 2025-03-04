@@ -1,0 +1,15 @@
+[advice]
+	detachedHead = false
+[core]
+	editor = nvim
+[diff]
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[user]
+	name = Mariusz Tang
+	email = dev@mariusztang.com
