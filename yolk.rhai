@@ -5,4 +5,8 @@ export let eggs = #{
 	strategy: "merge",
     },
     ssh: #{ targets: "~/.ssh", strategy: "merge"},
+    "user-dirs": #{
+	targets: "~/.config",
+	strategy: "merge",
+    },
 };
