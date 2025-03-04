@@ -1,5 +1,7 @@
 [advice]
 	detachedHead = false
+[commit]
+	gpgsign = true
 [core]
 	editor = nvim
 [diff]
@@ -10,6 +12,9 @@
 	defaultBranch = main
 [pull]
 	rebase = true
+[tag]
+	gpgSign = true
 [user]
 	name = Mariusz Tang
 	email = dev@mariusztang.com
+	signingkey = CF5CD8B547785CD5
