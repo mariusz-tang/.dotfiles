@@ -1,6 +1,7 @@
 export let eggs = #{
     git: "~/.config/git",
     i3: "~/.config/i3",
+    nvim: "~/.config/nvim",
     polybar: #{
 	targets: #{
 	    "./polybar": "~/.config/polybar",
