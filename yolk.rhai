@@ -1,5 +1,6 @@
 export let eggs = #{
     git: "~/.config/git",
+    i3: "~/.config/i3",
     shell: #{
 	targets: #{ zsh: "~/.config/zsh", bin: "~/bin", ohmyposh: "~/.config/ohmyposh" },
 	strategy: "merge",
