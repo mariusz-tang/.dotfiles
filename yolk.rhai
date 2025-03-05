@@ -25,4 +25,5 @@ export let eggs = #{
         targets: "~/.config",
         strategy: "merge",
     },
+    wezterm: "~/.config/wezterm",
 };
