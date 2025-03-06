@@ -1,4 +1,5 @@
 export let eggs = #{
+    dunst: "~/.config/dunst",
     git: "~/.config/git",
     i3: "~/.config/i3",
     nvim: "~/.config/nvim",
