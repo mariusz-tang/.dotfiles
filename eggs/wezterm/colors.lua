@@ -14,6 +14,6 @@ colors.scheme = is_dark_appearance and "GruvboxDark" or "GruvboxLight"
 colors.scheme_object = wezterm.color.get_builtin_schemes()[colors.scheme]
 colors.tab_bar_bg_color = is_dark_appearance and "#3c3836" or "ebdbb2"
 colors.tab_bar_inactive_fg_color = is_dark_appearance and "#a89984" or "#7c6f64"
-colors.window_bg_opacity = is_dark_appearance and 0.2 or 0.4
+colors.window_bg_opacity = 0.5
 
 return colors
