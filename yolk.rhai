@@ -10,6 +10,10 @@ export let eggs = #{
     },
     dunst: "~/.config/dunst",
     git: "~/.config/git",
+    gnupg: #{
+        targets: "~/.gnupg",
+        strategy: "merge",
+    },
     i3: "~/.config/i3",
     lock: #{
         targets: "~/bin",
