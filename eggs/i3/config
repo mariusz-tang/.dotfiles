@@ -27,7 +27,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Lock the session using i3lock.
-set $lock-session "i3lock --show-keyboard-layout --ignore-empty-password --color=f544e6"
+set $lock-session "i3lock --blur 2 --clock --date-color='#ffffffff' --time-color='#ffffffff'"
 exec --no-startup-id xss-lock --transfer-sleep-lock -- $lock-session
 
 include ~/.config/i3/config.d/assignments.conf
