@@ -1,4 +1,13 @@
 export let eggs = #{
+    darkman: #{
+        targets: #{
+            darkman: "~/.config/darkman",
+            lightmode: "~/.local/share/light-mode.d",
+            darkmode: "~/.local/share/dark-mode.d",
+            bin: "~/bin",
+        },
+        strategy: "merge",
+    },
     dunst: "~/.config/dunst",
     git: "~/.config/git",
     i3: "~/.config/i3",
