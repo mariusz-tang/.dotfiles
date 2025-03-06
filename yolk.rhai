@@ -43,4 +43,5 @@ export let eggs = #{
         strategy: "merge",
     },
     wezterm: "~/.config/wezterm",
+    "xdg-desktop-portal": "~/.config/xdg-desktop-portal",
 };
