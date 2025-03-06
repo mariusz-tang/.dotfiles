@@ -9,6 +9,10 @@ export let eggs = #{
         strategy: "merge",
     },
     dunst: "~/.config/dunst",
+    firefox: #{
+        targets: "~/.mozilla/firefox",
+        strategy: "merge",
+    },
     git: "~/.config/git",
     gnupg: #{
         targets: "~/.gnupg",

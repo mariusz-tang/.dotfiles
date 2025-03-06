@@ -1,0 +1,14 @@
+@import "userColorScheme.css";
+@import "userHighlightColor.css";
+
+:root {
+  /* Firefox settings pages */
+  --background-color-box: var(--bg1) !important;
+  --in-content-page-background: var(--bg) !important;
+  --in-content-page-color: var(--fg) !important;
+}
+
+body {
+  /* For websites that don't set a background themselves. */
+  background: var(--bg);
+}

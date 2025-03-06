@@ -1,0 +1,6 @@
+@import "userColorScheme.css";
+
+::selection {
+  background: var(--blue-dim) !important;
+  color: light-dark(var(--bg), var(--fg)) !important;
+}
