@@ -11,6 +11,10 @@ export let eggs = #{
     dunst: "~/.config/dunst",
     git: "~/.config/git",
     i3: "~/.config/i3",
+    lock: #{
+        targets: "~/bin",
+        strategy: "merge",
+    },
     nvim: "~/.config/nvim",
     picom: #{
         targets: #{
