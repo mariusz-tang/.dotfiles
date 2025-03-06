@@ -2,9 +2,16 @@ export let eggs = #{
     git: "~/.config/git",
     i3: "~/.config/i3",
     nvim: "~/.config/nvim",
+    picom: #{
+        targets: #{
+            picom: "~/.config/picom",
+            bin: "~/bin",
+        },
+        strategy: "merge",
+    },
     polybar: #{
         targets: #{
-            "./polybar": "~/.config/polybar",
+            polybar: "~/.config/polybar",
             bin: "~/bin",
         },
         strategy: "merge",
