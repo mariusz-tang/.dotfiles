@@ -1,4 +1,8 @@
 export let eggs = #{
+    autorandr: #{
+        targets: "~/.config/autorandr/",
+        strategy: "merge",
+    },
     darkman: #{
         targets: #{
             darkman: "~/.config/darkman",
