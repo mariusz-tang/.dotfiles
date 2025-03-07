@@ -44,7 +44,8 @@ gaps inner 10
 exec --no-startup-id autorandr --change
 
 # Theme-switching
-exec --no-startup-id systemctl start --user xsettingsd darkman
+exec --no-startup-id darkman run
+exec --no-startup-id systemctl start --user xsettingsd
 
 # Compositor
 exec_always --no-startup-id picom -b
