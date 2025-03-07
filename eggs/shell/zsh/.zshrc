@@ -15,6 +15,8 @@ fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
+
+
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
 ~/bin/greet-with-kuro
 
@@ -42,6 +44,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+
+# Pipx completions
+eval "$(register-python-argcomplete pipx)"
 
 # Aliases
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
