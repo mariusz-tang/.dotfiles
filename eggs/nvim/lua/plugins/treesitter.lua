@@ -24,6 +24,8 @@ return {
         --  If you are experiencing weird indenting issues, add the language to
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = false,
+        -- Treesitter does not cut off highlighting for git commit messages after 50 characers.
+        disable = { "gitcommit" },
       },
       indent = { enable = true, disable = {} },
     },
