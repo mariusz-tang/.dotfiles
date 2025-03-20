@@ -59,6 +59,12 @@ foreground = "green"
 template = "  venv "
 
 [[blocks.segments]]
+type = "status"
+style = "plain"
+foreground = "red"
+template = "{{ .String }} "
+
+[[blocks.segments]]
 type = 'text'
 style = 'plain'
 foreground_templates = [
