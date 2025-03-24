@@ -26,6 +26,9 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# tmux start command.
+set $tmux tmux new-session -A -s default
+
 # Lock the session using i3lock.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- lock
 
@@ -55,7 +58,7 @@ exec_always --no-startup-id picom -b
 
 # Initial app launches.
 exec --no-startup-id dunst -startup_notification
-exec --no-startup-id wezterm
+exec --no-startup-id wezterm start -- $tmux
 exec --no-startup-id firefox
 exec --no-startup-id discord
 exec --no-startup-id spotify-launcher

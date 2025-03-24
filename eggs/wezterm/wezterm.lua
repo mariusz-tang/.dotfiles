@@ -37,14 +37,5 @@ config.cursor_thickness = 1 -- This defaults to underline_thickness, which we ha
 
 -- General
 config.enable_wayland = false
-config.leader = { key = " ", mods = "CTRL", timeout_milliseconds = 1000 }
-
--- Sessions
-local sessionizer = require("sessionizer")
-local custom_workspaces = require("custom_workspaces")
-config.keys = {
-	{ key = "s", mods = "LEADER", action = wezterm.action_callback(sessionizer.toggle) },
-	{ key = "w", mods = "LEADER", action = wezterm.action_callback(custom_workspaces.toggle) },
-}
 
 return config

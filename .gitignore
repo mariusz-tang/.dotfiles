@@ -2,4 +2,5 @@
 /.deployed_cache
 /.yolk_git
 
+/eggs/tmux/plugins
 /eggs/nvim/lazy-lock.json

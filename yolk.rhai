@@ -55,6 +55,7 @@ export let eggs = #{
         targets: "~/.ssh",
         strategy: "merge"
     },
+    tmux: "~/.config/tmux",
     "user-dirs": #{
         targets: "~/.config",
         strategy: "merge",
