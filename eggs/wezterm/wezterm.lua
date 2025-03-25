@@ -28,7 +28,7 @@ local tab_bar_formatter = require("tab_bar_format")
 wezterm.on("format-tab-title", tab_bar_formatter(tab_bar_col, inactive_fg_col, active_bg_col, active_fg_col))
 
 -- Font
-config.font = wezterm.font("FiraCode Nerd Font Mono", { weight = "DemiBold" })
+config.font = wezterm.font("FiraCode Nerd Font Mono", { weight = "Medium" })
 config.font_size = 12
 config.line_height = 1.2
 config.underline_thickness = 2
