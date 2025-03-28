@@ -1,0 +1,9 @@
+#!/usr/bin/zsh
+
+SELECTED=$(fd --type executable --format {/} --exact-depth 1 . ~/bin/session | fzf --prompt="Pick a session: " --tmux)
+
+if [[ -z $SELECTED ]]; then
+    exit 0
+fi
+
+eval "~/bin/session/$SELECTED"
