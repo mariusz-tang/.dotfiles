@@ -25,9 +25,6 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { desc = "Previous item in quic
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = "Next item in location list" })
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "Previous item in location list" })
 
-vim.keymap.set("i", "<C-Enter>", "<C-[>o", { desc = "Open new line below current line" })
-vim.keymap.set("i", "<C-S-Enter>", "<C-[>O", { desc = "Open new line above current line" })
-
 vim.keymap.set(
   "n",
   "<leader>s#",
