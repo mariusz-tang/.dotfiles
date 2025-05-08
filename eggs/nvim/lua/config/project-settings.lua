@@ -31,8 +31,6 @@ default.lsps.emmet_language_server = {
   },
 }
 
-default.non_mason_lsps = {}
-
 default.linters = {
   markdown = { "markdownlint" },
 }

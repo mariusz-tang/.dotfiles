@@ -23,12 +23,11 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      { "williamboman/mason.nvim", config = true },
-      "williamboman/mason-lspconfig.nvim",
+      "mason-org/mason.nvim",
+      "mason-org/mason-lspconfig.nvim",
       "WhoIsSethDaniel/mason-tool-installer.nvim",
       "hrsh7th/nvim-cmp",
       "hrsh7th/cmp-nvim-lsp",
-      -- "stevearc/conform.nvim",
       { "j-hui/fidget.nvim", opts = { notification = { window = { winblend = 0 } } } },
     },
     config = function()
@@ -70,30 +69,19 @@ return {
       end
       vim.diagnostic.config({ signs = { text = diagnostic_signs }, virtual_text = true })
 
+      local ensure_installed = vim.g.project_settings.mason_required_tools
+      require("mason").setup()
+      require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+
+      local servers = vim.g.project_settings.lsps
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-      local servers = vim.g.project_settings.lsps
-      local ensure_installed = vim.g.project_settings.mason_required_tools
+      for server, config in pairs(servers) do
+        config.capabilities = vim.tbl_deep_extend("force", {}, capabilities, config.capabilities or {})
 
-      require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
-      require("mason-lspconfig").setup({
-        handlers = {
-          function(server_name)
-            if not servers[server_name] then
-              -- Don't enable servers which have not been explicitly configured.
-              return
-            end
-            local server = servers[server_name]
-            -- Handles applying capability overrides provided above.
-            server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-            require("lspconfig")[server_name].setup(server)
-          end,
-        },
-      })
-      local extra_lsps = vim.g.project_settings.non_mason_lsps
-      for i, lsp in pairs(vim.tbl_keys(extra_lsps)) do
-        require("lspconfig")[lsp].setup(extra_lsps[lsp])
+        vim.lsp.enable(server)
+        vim.lsp.config(server, config)
       end
     end,
   },
