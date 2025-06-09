@@ -23,6 +23,7 @@ export let eggs = #{
         strategy: "merge",
     },
     i3: "~/.config/i3",
+    lazygit: "~/.config/lazygit",
     lock: #{
         targets: "~/bin",
         strategy: "merge",
