@@ -33,9 +33,12 @@ return {
       local custom_textobjects_surround = {}
 
       for i, textobject in pairs(custom_textobjects) do
-        custom_textobjects_ai[i] = spec_treesitter({ a = textobject.outer, i = textobject.inner })
+        custom_textobjects_ai[i] = spec_treesitter(
+          { a = textobject.outer, i = textobject.inner },
+          { use_nvim_treesitter = true }
+        )
         if i ~= "O" then
-          custom_textobjects_surround[i] = ts_input(textobject)
+          custom_textobjects_surround[i] = ts_input(textobject, { use_nvim_treesitter = true })
         end
       end
 
