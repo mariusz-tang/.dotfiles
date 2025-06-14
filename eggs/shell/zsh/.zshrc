@@ -10,6 +10,9 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
+zinit ice lucid as"program" pick"bin/git-dsf"
+zinit load so-fancy/diff-so-fancy
+
 # Load completions
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
@@ -67,6 +70,27 @@ alias lx='ll -BX'       # sort by extension
 alias lz='ll -rS'       # sort by size
 alias lt='ll -rt'       # sort by date
 alias lp='la | less'    # pager
+
+# git
+alias ga='git add'
+alias gap='ga --patch'
+alias gb='git branch'
+alias gba='gb --all'
+alias gc='git commit'
+alias gca='gc --amend --no-edit'
+alias gce='gc --amend'
+alias gcl='git clone'
+alias gd='git diff --output-indicator-new=" " --output-indicator-old=" "'
+alias gds='gd --staged'
+alias gi='git init'
+alias gl='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n"'
+alias gm='git merge'
+alias gn='git switch -c'  # new branch
+alias gp='git push'
+alias gr='git reset'
+alias gs='git status --short'
+alias gsw='git switch'
+alias gu='git pull'
 
 # Accept (potentially wrong) vim exit commands
 alias :q='exit'
