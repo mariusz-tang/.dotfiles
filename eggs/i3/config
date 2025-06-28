@@ -56,6 +56,9 @@ exec --no-startup-id ssh-agent -D -a ${SSH_AUTH_SOCK} -t 30m
 # Compositor
 exec_always --no-startup-id picom -b
 
+# IMF
+exec --no-startup-id ibus-daemon -rxRd
+
 # Initial app launches.
 exec --no-startup-id dunst -startup_notification
 exec --no-startup-id wezterm start -- $tmux
