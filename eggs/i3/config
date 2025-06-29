@@ -39,9 +39,9 @@ include ~/.config/i3/config.d/keybinds.conf
 title_align center
 
 # Removed title bars from split containers.
-default_border pixel 5
+default_border pixel 2
 
-gaps inner 10
+gaps inner 30
 
 # Monitor configuration.
 exec --no-startup-id autorandr --change
