@@ -1,7 +1,7 @@
 return {
   {
     "echasnovski/mini.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
+    dependencies = { "nvim-treesitter/nvim-treesitter-textobjects", branch = "main" },
     config = function()
       require("mini.cursorword").setup()
       require("mini.icons").setup()
