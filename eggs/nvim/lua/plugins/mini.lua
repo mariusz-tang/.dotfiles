@@ -8,7 +8,6 @@ return {
       require("mini.pairs").setup()
       require("mini.starter").setup()
       require("mini.statusline").setup()
-      require("mini.surround").setup({ silent = true })
 
       local custom_textobjects = {
         a = { outer = "@attribute.outer", inner = "@attribute.inner" },
