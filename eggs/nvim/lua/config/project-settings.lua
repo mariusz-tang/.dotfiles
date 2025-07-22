@@ -18,7 +18,7 @@ default.lsps.pylsp = {
       plugins = {
         pycodestyle = {
           maxLineLength = 88,
-          ignore = { "E203", "E701" },
+          extend_ignore = { "E203", "E701" },
         },
       },
     },
