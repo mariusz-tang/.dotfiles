@@ -93,6 +93,9 @@ alias gs='git status --short'
 alias gsw='git switch'
 alias gu='git pull'
 
+# Allow the use of the above with yolk
+alias y="yolk "
+
 # Accept (potentially wrong) vim exit commands
 alias :q='exit'
 alias :Q='exit'
