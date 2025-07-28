@@ -15,6 +15,7 @@
 	sort = -committerdate
 [commit]
 	gpgsign = true
+	verbose = true
 [init]
 	defaultBranch = main
 [interactive]
