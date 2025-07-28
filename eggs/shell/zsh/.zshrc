@@ -45,6 +45,7 @@ eval $(dircolors)
 # Completion styling
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' completer _expand_alias _complete _ignored
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:*' fzf-preview 'ls --color $realpath'
