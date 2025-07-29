@@ -1,5 +1,6 @@
 require("config.options")
 require("config.keymaps")
+require("config.diagnostics")
 require("config.autocommands")
-require("config.project-settings")
+require("config.load-project-settings")
 require("config.lazy")

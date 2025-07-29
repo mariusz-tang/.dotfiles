@@ -1,38 +1,61 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "main",
     lazy = false,
+    branch = "main",
     build = ":TSUpdate",
-    main = "nvim-treesitter.configs", -- Sets main module to use for opts
     config = function()
-      local ts = require("nvim-treesitter")
-
       local languages = {
-        "bash",
-        "c",
-        "diff",
-        "html",
+        -- Vim
         "lua",
         "luadoc",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "query",
         "vim",
         "vimdoc",
+        -- Git
+        "diff",
+        "gitattributes",
+        "gitcommit",
+        "git_config",
+        "gitignore",
+        "git_rebase",
+        -- Markdown
+        "markdown",
+        "markdown_inline",
+        -- Other
+        "editorconfig",
+        "tmux",
+        -- Manually install other language parsers.
       }
-      ts.install(languages)
-      ts.update()
+      local ts = require("nvim-treesitter")
+      ts.install(languages):wait(30000)
+      ts.update():wait(30000)
+
+      vim.keymap.set("n", "<leader>ts", vim.treesitter.start, { desc = "Start" })
+      vim.keymap.set("n", "<leader>tS", vim.treesitter.stop, { desc = "Stop" })
 
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = ts.get_installed(),
-        callback = function()
-          vim.treesitter.start() -- Syntax highlighting.
-          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        group = vim.api.nvim_create_augroup("treesitter", { clear = true }),
+        callback = function(event)
+          local filetype = event.match
+
+          local excluded = { "netrw", "minifiles", "minipick", "mininotify", "lazy", "lazy_backdrop" }
+          for _, language in ipairs(excluded) do
+            if filetype == language then
+              return
+            end
+          end
+
+          if pcall(vim.treesitter.start) then
+            vim.treesitter.start() -- Syntax highlighting.
+            vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          else
+            print("Could not start treesitter for language '" .. filetype .. "'. Is there a parser installed?")
+          end
         end,
       })
     end,
   },
-  { "nvim-treesitter/nvim-treesitter-context", opts = { enabled = true, max_lines = "30%" } },
+  { "nvim-treesitter/nvim-treesitter-context", opts = { enabled = true, max_lines = 5 } },
+  { "nvim-treesitter/nvim-treesitter-textobjects", branch = "main", lazy = true },
+  { "windwp/nvim-ts-autotag", opts = {} },
 }

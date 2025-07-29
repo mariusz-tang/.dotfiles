@@ -1,22 +1,19 @@
+-- We are using mini.basic for most options.
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.opt.undofile = true
-
-vim.opt.signcolumn = "yes"
+-- Show vertical lines at 80 and 120 characters.
 vim.opt.colorcolumn = "80,120"
 
--- Line numbers.
-vim.opt.number = true
+-- Relative line numbers.
 vim.opt.relativenumber = true
 
 -- Keep context lines around the cursor.
 vim.opt.scrolloff = 8
-vim.opt.cursorline = true
 
--- Smart case during search.
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+-- mini.basic changes this to stop `~` being shown past the end of the buffer.
+-- We are reverting that change.
+vim.opt.fillchars = ""
 
 -- Always use spaces instead of tabs.
 vim.opt.tabstop = 4
@@ -24,14 +21,15 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
-vim.opt.breakindent = true
-vim.opt.smartindent = true
+-- Display leading and trailing spaces in addition to what mini.basic provides.
+vim.opt.listchars = {
+  tab = "|->",
+  precedes = "…",
+  extends = "…",
+  trail = "·",
+  lead = "·",
+  nbsp = "␣",
+}
 
-vim.opt.wrap = false
-
--- Display certain whitespace characters.
-vim.opt.list = true
-vim.opt.listchars = { tab = "|->", trail = "·", lead = "·", nbsp = "␣" }
-
--- Mode is already shown in the statusline.
-vim.opt.showmode = false
+-- Add fuzzy matching.
+vim.opt.completeopt = "menuone,noselect,fuzzy"
