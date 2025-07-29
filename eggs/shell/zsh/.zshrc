@@ -89,6 +89,7 @@ alias gm='git merge'
 alias gn='git switch -c'  # new branch
 alias gp='git push'
 alias gr='git reset'
+alias gri='git rebase --interactive'
 alias gs='git status --short'
 alias gsw='git switch'
 alias gu='git pull'
