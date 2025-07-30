@@ -12,5 +12,9 @@ return {
     opts = function()
       return { snippets = { require("mini.snippets").gen_loader.from_lang() } }
     end,
+    config = function(_, opts)
+      require("mini.snippets").setup(opts)
+      MiniSnippets.start_lsp_server()
+    end,
   },
 }
