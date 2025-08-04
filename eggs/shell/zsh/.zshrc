@@ -18,7 +18,8 @@ fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
-
+# Initialise nvm
+source /usr/share/nvm/init-nvm.sh
 
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
 ~/bin/greet-with-kuro
