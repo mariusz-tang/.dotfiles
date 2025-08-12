@@ -114,4 +114,5 @@ fi
 
 export NNN_ICONLOOKUP=1
 export NNN_PLUG='p:preview-tui'
-alias na='n -a -e -P p'
+export NNN_BMS="d:$HOME/downloads;h:$HOME;p:$HOME/projects"
+alias na='n -a -e'
