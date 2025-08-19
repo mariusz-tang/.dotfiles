@@ -62,6 +62,6 @@ exec --no-startup-id ibus-daemon -rxRd
 # Initial app launches.
 exec --no-startup-id dunst -startup_notification
 exec --no-startup-id wezterm start -- $tmux
-exec --no-startup-id firefox
+exec --no-startup-id zen-browser
 exec --no-startup-id discord
 exec --no-startup-id spotify-launcher
