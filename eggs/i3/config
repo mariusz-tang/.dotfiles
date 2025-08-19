@@ -59,9 +59,9 @@ exec_always --no-startup-id picom -b
 # IMF
 exec --no-startup-id ibus-daemon -rxRd
 
-# Initial app launches.
+# Notifications
 exec --no-startup-id dunst -startup_notification
-exec --no-startup-id wezterm start -- $tmux
+
+# Startup apps
 exec --no-startup-id zen-browser
 exec --no-startup-id discord
-exec --no-startup-id spotify-launcher
