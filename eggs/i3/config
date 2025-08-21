@@ -29,9 +29,6 @@ set $ws10 "10"
 # tmux start command.
 set $tmux tmux new-session -A -s default
 
-# Lock the session using i3lock.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- lock
-
 include ~/.config/i3/config.d/assignments.conf
 include ~/.config/i3/config.d/colors.conf
 include ~/.config/i3/config.d/keybinds.conf
@@ -43,18 +40,12 @@ default_border pixel 2
 
 gaps inner 30
 
-# Monitor configuration.
-exec --no-startup-id autorandr --change
-
 # Theme-switching
 exec --no-startup-id darkman run
 exec --no-startup-id systemctl start --user xsettingsd
 
 # SSH agent. Key lifetime is 30 minutes.
 exec --no-startup-id ssh-agent -D -a ${SSH_AUTH_SOCK} -t 30m
-
-# Compositor
-exec_always --no-startup-id picom -b
 
 # IMF
 exec --no-startup-id ibus-daemon -rxRd
