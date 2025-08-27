@@ -16,7 +16,7 @@ return {
     },
     config = function(_, opts)
       require("mini.diff").setup(opts)
-      vim.keymap.set("n", "<leader>d", MiniDiff.toggle_overlay, { desc = "Toggle diff overlay" })
+      vim.keymap.set("n", "<leader>vd", MiniDiff.toggle_overlay, { desc = "Toggle diff overlay" })
     end,
   },
 }

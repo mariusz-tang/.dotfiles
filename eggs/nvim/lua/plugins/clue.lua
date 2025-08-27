@@ -9,6 +9,7 @@ return {
           { mode = "n", keys = "<Leader>t", desc = "+Treesitter" },
           { mode = "n", keys = "<Leader>s", desc = "+Search" },
           { mode = "n", keys = "<Leader>l", desc = "+LSP" },
+          { mode = "n", keys = "<Leader>v", desc = "+View" },
           gen_clues.builtin_completion(),
           gen_clues.g(),
           gen_clues.marks(),
