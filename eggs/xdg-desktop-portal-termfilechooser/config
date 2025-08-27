@@ -1,5 +1,4 @@
 [filechooser]
-cmd=nnn-wrapper.sh
 env=TERMCMD=wezterm blocking-start --
 default_dir=$HOME
 ; Uncomment to skip creating destination save files with instructions in them

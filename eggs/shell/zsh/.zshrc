@@ -96,7 +96,7 @@ alias gsw='git switch'
 alias gu='git pull'
 
 # Allow the use of the above with yolk
-alias y="yolk "
+alias yo="yolk "
 
 # Accept (potentially wrong) vim exit commands
 alias :q='exit'
@@ -106,13 +106,11 @@ alias :wq='exit'
 # Shell integrations
 eval "$(fzf --zsh)"
 
-# nnn
-# cd on quit
-if [ -f /usr/share/nnn/quitcd/quitcd.bash_sh_zsh ]; then
-    source /usr/share/nnn/quitcd/quitcd.bash_sh_zsh
-fi
-
-export NNN_ICONLOOKUP=1
-export NNN_PLUG='p:preview-tui'
-export NNN_BMS="d:$HOME/downloads;h:$HOME;p:$HOME/projects"
-alias na='n -a -e'
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
