@@ -1,5 +1,5 @@
 [filechooser]
-env=TERMCMD=wezterm blocking-start --
+env=TERMCMD=alacritty -e
 default_dir=$HOME
 ; Uncomment to skip creating destination save files with instructions in them
 ; create_help_file=0

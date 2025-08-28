@@ -2,6 +2,8 @@
 /.deployed_cache
 /.yolk_git
 
+/eggs/alacritty/themes
+/eggs/alacritty/theme.toml
 /eggs/tmux/tmux/plugins
 /eggs/nvim/lazy-lock.json
 /eggs/yazi/plugins

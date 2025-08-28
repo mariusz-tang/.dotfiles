@@ -1,4 +1,5 @@
 export let eggs = #{
+    alacritty: "~/.config/alacritty",
     autorandr: #{
         targets: "~/.config/autorandr/",
         strategy: "merge",
@@ -62,7 +63,6 @@ export let eggs = #{
         targets: "~/.config",
         strategy: "merge",
     },
-    wezterm: "~/.config/wezterm",
     "xdg-desktop-portal": "~/.config/xdg-desktop-portal",
     "xdg-desktop-portal-termfilechooser": "~/.config/xdg-desktop-portal-termfilechooser",
     yazi: "~/.config/yazi",
