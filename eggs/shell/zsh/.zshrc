@@ -95,11 +95,6 @@ alias gu='git pull'
 # Allow the use of the above with yolk
 alias yo="yolk "
 
-# Accept (potentially wrong) vim exit commands
-alias :q='exit'
-alias :Q='exit'
-alias :wq='exit'
-
 # Shell integrations
 eval "$(fzf --zsh)"
 
