@@ -2,10 +2,10 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "echasnovski/mini.completion",
-      "echasnovski/mini.pick",
-      "echasnovski/mini.extra",
-      "echasnovski/mini.notify",
+      "nvim-mini/mini.completion",
+      "nvim-mini/mini.pick",
+      "nvim-mini/mini.extra",
+      "nvim-mini/mini.notify",
       "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
     config = function()

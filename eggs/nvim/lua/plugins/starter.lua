@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.starter",
+    "nvim-mini/mini.starter",
     version = false,
     opts = function()
       local sections = require("mini.starter").sections

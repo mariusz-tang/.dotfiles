@@ -1,8 +1,8 @@
 return {
   {
-    "echasnovski/mini.pick",
+    "nvim-mini/mini.pick",
     version = false,
-    dependencies = { "echasnovski/mini.icons", "echasnovski/mini.extra" },
+    dependencies = { "nvim-mini/mini.icons", "nvim-mini/mini.extra" },
     opts = {
       mappings = {
         paste = "<C-P>",

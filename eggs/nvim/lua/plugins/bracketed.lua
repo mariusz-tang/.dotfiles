@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.bracketed",
+    "nvim-mini/mini.bracketed",
     version = false,
     opts = function()
       local remove_keymaps = { "file", "indent", "oldfile", "treesitter", "undo", "yank" }

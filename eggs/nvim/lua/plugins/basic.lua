@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.basics",
+    "nvim-mini/mini.basics",
     version = false,
     -- High priority so other plugin specs can override keybinds.
     priority = 900,

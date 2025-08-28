@@ -1,8 +1,8 @@
 return {
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     version = false,
-    dependencies = "echasnovski/mini.icons",
+    dependencies = "nvim-mini/mini.icons",
     opts = {
       mappings = {
         -- Close file explorer on file enter by default.

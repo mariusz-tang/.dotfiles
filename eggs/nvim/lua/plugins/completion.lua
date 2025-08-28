@@ -1,12 +1,12 @@
 return {
   {
-    "echasnovski/mini.completion",
+    "nvim-mini/mini.completion",
     version = false,
-    dependencies = { "echasnovski/mini.icons", "echasnovski/mini.snippets" },
+    dependencies = { "nvim-mini/mini.icons", "nvim-mini/mini.snippets" },
     opts = {},
   },
   {
-    "echasnovski/mini.snippets",
+    "nvim-mini/mini.snippets",
     version = false,
     dependencies = "rafamadriz/friendly-snippets",
     opts = function()
