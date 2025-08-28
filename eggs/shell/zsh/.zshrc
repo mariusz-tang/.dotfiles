@@ -54,10 +54,6 @@ zstyle ':fzf-tab:complete:*' fzf-preview 'ls --color $realpath'
 # Pipx completions
 eval "$(register-python-argcomplete pipx)"
 
-# Aliases
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-alias dotfilesui='/usr/bin/lazygit -g $HOME/.dotfiles/ -w $HOME'
-
 # Color output
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
