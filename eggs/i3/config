@@ -36,7 +36,7 @@ include ~/.config/i3/config.d/keybinds.conf
 title_align center
 
 # Removed title bars from split containers.
-default_border pixel 2
+default_border none
 
 gaps inner 30
 
