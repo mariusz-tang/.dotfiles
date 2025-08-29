@@ -49,7 +49,7 @@
 
 # Colors
 [color "blame"]
-	highlightRecent = black bold,1 year ago,white,1 month ago,default,7 days ago,blue
+	highlightRecent = normal bold dim,1 year ago,white,1 month ago,default,7 days ago,blue
 [color "branch"]
 	current  = magenta
 	local    = default
@@ -57,7 +57,7 @@
 	upstream = green
 	plain    = blue
 [color "diff"]
-	meta       = black bold
+	meta       = normal bold dim
 	frag       = magenta
 	context    = white
 	whitespace = yellow reverse
