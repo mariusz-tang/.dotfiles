@@ -9,7 +9,10 @@ return {
       jump_next_row = { "<Enter>", mode = { "n", "v" } },
       jump_prev_row = { "<S-Enter>", mode = { "n", "v" } },
     },
+    view = {
+      display_mode = "border",
+    },
   },
   cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
-  keys = { { "<leader>vc", "<cmd>CsvViewToggle display_mode=border<cr>", desc = "Toggle CSV view" } },
+  keys = { { "<leader>vc", "<cmd>CsvViewToggle<cr>", desc = "Toggle CSV view" } },
 }
