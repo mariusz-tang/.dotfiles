@@ -1,3 +1,12 @@
+vim.api.nvim_create_autocmd("BufReadPost", {
+  desc = "Start CSV view plugin.",
+  group = vim.api.nvim_create_augroup("enable-csvview", { clear = true }),
+  pattern = "*.csv",
+  callback = function()
+    vim.api.nvim_command("CsvViewEnable")
+  end,
+})
+
 return {
   "hat0uma/csvview.nvim",
   opts = {
