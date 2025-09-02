@@ -38,7 +38,7 @@ return {
         callback = function(event)
           local filetype = event.match
 
-          local excluded = { "netrw", "minifiles", "minipick", "mininotify", "lazy", "lazy_backdrop", "text" }
+          local excluded = { "netrw", "minifiles", "minipick", "mininotify", "lazy", "lazy_backdrop", "text", "csv" }
           for _, language in ipairs(excluded) do
             if filetype == language then
               return
