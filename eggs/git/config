@@ -89,3 +89,5 @@
 	insteadOf = "gh:"
 [url "git@github.com:mariusz-tang/"]
 	insteadOf = "me:"
+[url "https://aur.archlinux.org/"]
+	insteadOf = "aur:"
