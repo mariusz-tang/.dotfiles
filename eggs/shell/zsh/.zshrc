@@ -96,6 +96,7 @@ alias ye="ls ~/.config/yolk/eggs/ | sed 's+/++' | fzf --prompt='Edit egg: ' --tm
 
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # yazi
 function y() {
