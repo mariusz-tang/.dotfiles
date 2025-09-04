@@ -89,8 +89,10 @@ alias gs='git status'
 alias gsw='git switch'
 alias gu='git pull'
 
-# Allow the use of the above with yolk
+# Yolk
+alias yolk="yolk "
 alias yo="yolk "
+alias ye="ls ~/.config/yolk/eggs/ | sed 's+/++' | fzf --prompt='Edit egg: ' --tmux | xargs yolk edit"
 
 # Shell integrations
 eval "$(fzf --zsh)"
