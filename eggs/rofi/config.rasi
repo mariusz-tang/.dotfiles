@@ -1,3 +1,5 @@
+@theme "gruvbox-dark"
+
 configuration {
 	font: "FiraCode Nerd Font Mono 16";
 	terminal: "alacritty";
@@ -11,4 +13,24 @@ configuration {
   }
 }
 
-@theme "gruvbox-dark"
+* {
+  scrollbar: false;
+}
+
+window {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+}
+
+listview {
+  spacing: 0;
+}
+
+element {
+  padding: 10px;
+}
+
+inputbar {
+  padding: 10px;
+}
