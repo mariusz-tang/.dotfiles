@@ -1,0 +1,5 @@
+[opener]
+play = [
+    { run = 'vlc "$@"', orphan = true, for = "unix" },
+    { run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+]
