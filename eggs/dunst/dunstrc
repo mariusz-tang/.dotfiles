@@ -65,3 +65,8 @@
     timeout = 0
     override_pause_level = 60
     default_icon = dialog-warning
+
+[Media]
+    appname = "Media Control"
+    format = "%s"
+    alignment = center

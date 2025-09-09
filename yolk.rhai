@@ -24,6 +24,10 @@ export let eggs = #{
         targets: "~/bin",
         strategy: "merge",
     },
+    "media-control": #{
+        targets: "~/bin",
+        strategy: "merge",
+    },
     nvim: "~/.config/nvim",
     picom: #{
         targets: #{
