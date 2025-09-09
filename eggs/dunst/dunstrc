@@ -9,16 +9,17 @@
     scale = 1
     notification_limit = 20
     corner_radius = 10
+    frame_width = 0
 
     ### Progress bar ###
     progress_bar = true
-    progress_bar_height = 20
-    progress_bar_frame_width = 2
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
     progress_bar_min_width = 150
     progress_bar_max_width = 300
     progress_bar_corner_radius = 5
     progress_bar_corners = all
-    highlight = "#ebdbb2"
+    highlight = "#fabd2f"
 
     indicate_hidden = yes
 
@@ -32,6 +33,7 @@
 
     background = "#282828"
     foreground = "#ebdbb2"
+    frame_color = "#fabd2f"
 
     sort = yes
 
@@ -52,15 +54,13 @@
 
 [urgency_low]
     timeout = 10
-    default_icon = dialog-information
 
 [urgency_normal]
-    frame_color = "#fabd2f"
     timeout = 10
     override_pause_level = 30
-    default_icon = dialog-information
 
 [urgency_critical]
+    frame_width = 3
     frame_color = "#fb4934"
     timeout = 0
     override_pause_level = 60
