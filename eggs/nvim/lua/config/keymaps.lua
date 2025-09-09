@@ -30,3 +30,5 @@ vim.keymap.del("n", "gri")
 vim.keymap.del("n", "grr")
 vim.keymap.del({ "n", "v" }, "gra")
 vim.keymap.del("n", "gO")
+
+vim.keymap.set("n", "<leader>w", "<cmd>bd<cr>", { desc = "Close buffer" })
