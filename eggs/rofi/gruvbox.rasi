@@ -1,0 +1,126 @@
+@import "colors/light-dark"
+@import "colors/common"
+
+* {
+    background-color:               var(background);
+    text-color:                     var(foreground);
+    spacing: 0;
+
+    overlay-color:                  var(gruvbox-bg0-hard-overlay);
+    prompt-mode-color:              var(gruvbox-green);
+    prompt-sep-color:               var(gruvbox-magenta);
+    element-prefix-color:           var(gruvbox-yellow-dark);
+
+    background:                     var(gruvbox-bg0);
+    foreground:                     var(gruvbox-fg1);
+    alternate-background:           var(gruvbox-bg0-soft);
+    alternate-foreground:           var(foreground);
+
+    active-background:              var(gruvbox-yellow-dark);
+    active-foreground:              var(background);
+    selected-active-background:     var(gruvbox-yellow-light);
+    selected-active-foreground:     var(active-foreground);
+
+    urgent-background:              var(gruvbox-red-dark);
+    urgent-foreground:              var(background);
+    alternate-urgent-background:    var(urgent-background);
+    alternate-urgent-foreground:    var(urgent-foreground);
+    selected-urgent-background:     var(gruvbox-red-light);
+    selected-urgent-foreground:     var(urgent-foreground);
+}
+
+window {
+    // This usage of border allows us to have dynamic line height while dimming
+    // the rest of the screen, which I could not seem to do with fullscreen.
+    width:              100%;
+    border:             100% calc((100% - 40ch)/2);
+    border-color:       var(overlay-color);
+    background-color:   transparent;
+    anchor:             north;
+    y-offset:           calc(-100% - 7em);
+}
+
+mainbox {
+    background-color:   var(overlay-color);
+    children:           [input-box, listview];
+}
+
+input-box {
+    expand:         false;
+    children:       [inputbar, message];
+    padding:        0.5em ;
+    border-radius:  1em 1em 0 1em;
+    spacing:        0.5em;
+}
+
+inputbar {
+    spacing:    0;
+    children:   [prompt, textbox-prompt-sep, entry];
+}
+prompt {
+    text-color: var(prompt-mode-color);
+}
+textbox-prompt-sep {
+    margin:     0 0.3em;
+    expand:     false;
+    str:        "❯";
+    text-color: var(prompt-sep-color);
+}
+entry {
+    cursor-width:   1ch;
+    blink:          false;
+}
+
+listview {
+    spacing:        0;
+    fixed-height:   false;
+    lines:          6;
+    border-radius:  0 0 1em 1em;
+    margin:         0 0 0 4ch;
+}
+
+element {
+    children:   [textbox-element-prefix, element-text];
+    padding:    0.5em;
+}
+textbox-element-prefix {
+    margin:             0 0.3em;
+    expand:             false;
+    str:                "󰘍";
+    text-color:         var(element-prefix-color);
+    background-color:   inherit;
+}
+element-text {
+    background-color:   inherit;
+    text-color:         inherit;
+}
+
+element normal.normal {
+    background-color:   var(alternate-background);
+    text-color:         var(alternate-foreground);
+}
+element selected.normal {
+    background-color:   var(foreground);
+    text-color:         var(background);
+}
+element normal.active,
+element alternate.active {
+    background-color:   var(active-background);
+    text-color:         var(active-foreground);
+}
+element selected.active {
+    background-color:   var(selected-active-background);
+    text-color:         var(selected-active-foreground);
+}
+element normal.urgent {
+    background-color:   var(alternate-urgent-background);
+    text-color:         var(alternate-urgent-foreground);
+}
+element alternate.urgent {
+    background-color:   var(urgent-background);
+    text-color:         var(urgent-foreground);
+}
+element selected.urgent {
+    background-color:   var(selected-urgent-background);
+    text-color:         var(selected-urgent-foreground);
+}

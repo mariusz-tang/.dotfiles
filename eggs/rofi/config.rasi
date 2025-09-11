@@ -1,10 +1,12 @@
-@theme "gruvbox-dark"
-
 configuration {
-    font: "FiraCode Nerd Font Mono 16";
+    font: "FiraCode Nerd Font Mono 20";
     terminal: "alacritty";
     sort: true;
     sorting-method: "fzf";
+    // Make these four characters long for alignment purposes.
+    display-window: "wind";
+    display-run: " run";
+    display-ssh: " shh";
   timeout {
       action: "kb-cancel";
       delay:  0;
@@ -15,24 +17,4 @@ configuration {
   }
 }
 
-* {
-  scrollbar: false;
-}
-
-window {
-  border: none;
-  border-radius: 10px;
-  padding: 0;
-}
-
-listview {
-  spacing: 0;
-}
-
-element {
-  padding: 10px;
-}
-
-inputbar {
-  padding: 10px;
-}
+@theme "gruvbox"
