@@ -61,9 +61,8 @@ prompt {
     text-color: var(prompt-mode-color);
 }
 textbox-prompt-sep {
-    margin:     0 0.3em;
     expand:     false;
-    str:        "❯";
+    str:        " ❯ ";
     text-color: var(prompt-sep-color);
 }
 entry {
@@ -84,9 +83,8 @@ element {
     padding:    0.5em;
 }
 textbox-element-prefix {
-    margin:             0 0.3em;
     expand:             false;
-    str:                "󰘍";
+    str:                " 󰘍 ";
     text-color:         var(element-prefix-color);
     background-color:   inherit;
 }
