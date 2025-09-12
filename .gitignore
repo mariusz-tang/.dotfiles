@@ -4,6 +4,7 @@
 
 /eggs/alacritty/themes
 /eggs/alacritty/theme.toml
+/eggs/rofi/colors/light-dark.rasi
 /eggs/tmux/tmux/plugins
 /eggs/nvim/lazy-lock.json
 /eggs/yazi/plugins
