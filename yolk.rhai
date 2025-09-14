@@ -43,7 +43,13 @@ export let eggs = #{
         },
         strategy: "merge",
     },
-    rofi: "~/.config/rofi",
+    rofi: #{
+        targets: #{
+            bin: "~/bin",
+            config: "~/.config/rofi"
+        },
+        strategy: "merge",
+    },
     shell: #{
         targets: #{
             zsh: "~/.config/zsh",

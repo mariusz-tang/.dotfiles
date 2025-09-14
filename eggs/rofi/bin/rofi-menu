@@ -1,0 +1,29 @@
+#! /usr/bin/zsh
+
+# This opens rofi in dmenu mode, with one option per argument.
+# Each argument should contain a single pair of brackets containing one
+# character, which will be used as the keyboard shortcut to select that letter.
+# For example, [p]oweroff.
+
+function get_key {
+    # Prints the letter inside the brackets.
+    # For example, `get_key 'h[e]llo'` would print `e`.
+    local choice_name=$1
+    echo $choice_name | sed 's/.*\[\(.\)\].*/\1/'
+}
+
+count=0
+choices=""
+flags=""
+for choice in $@; do
+    count=$((count + 1))
+    key=$(get_key $choice)
+    choices="$choices|$choice"
+    flags="$flags -kb-select-$count $key"
+done
+
+# Remove the prepended delimiters.
+choices=${choices[2,-1]}
+flags=${flags[2,-1]}
+
+eval "echo '$choices' | rofi -dmenu -sep '|' -config config-dmenu $flags"

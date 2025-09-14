@@ -1,0 +1,20 @@
+#! /usr/bin/zsh
+
+poweroff='[p]oweroff'
+reboot='[r]eboot'
+lock='[l]ock'
+selected_option=$(rofi-menu $poweroff $reboot $lock)
+
+case $selected_option in
+    $poweroff)
+        poweroff
+        ;;
+    $reboot)
+        reboot
+        ;;
+    $lock)
+        # Allow the rofi window to disappear before locking.
+        sleep 0.1
+        lock
+        ;;
+esac
