@@ -12,6 +12,8 @@ function get_key {
     echo $choice_name | sed 's/.*\[\(.\)\].*/\1/'
 }
 
+message=$1
+shift
 count=0
 choices=""
 flags=""
@@ -26,4 +28,4 @@ done
 choices=${choices[2,-1]}
 flags=${flags[2,-1]}
 
-eval "echo '$choices' | rofi -dmenu -sep '|' -config config-dmenu $flags"
+eval "echo '$choices' | rofi -dmenu -mesg '$message' -sep '|' -config config-dmenu $flags"

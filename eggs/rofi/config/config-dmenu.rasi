@@ -1,9 +1,24 @@
 @theme "common"
 
+window {
+    // Center the listview rather than the entire window.
+    y-offset: -1em;
+}
+
 mainbox {
-    children: [listview];
+    children: [message, listview];
 }
 
 listview {
     border-radius:  1em;
+}
+
+message {
+    background-color: transparent;
+    margin: 0 0 1em 0;
+}
+textbox {
+    background-color: inherit;
+    text-color: inherit;
+    horizontal-align: 0.5;
 }

@@ -3,7 +3,7 @@
 poweroff='[p]oweroff'
 reboot='[r]eboot'
 lock='[l]ock'
-selected_option=$(rofi-menu $poweroff $reboot $lock)
+selected_option=$(rofi-menu "power options" $poweroff $reboot $lock)
 
 case $selected_option in
     $poweroff)
