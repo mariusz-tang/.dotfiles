@@ -1,5 +1,6 @@
+@theme "common"
+
 configuration {
-    font: "FiraCode Nerd Font Mono 20";
     terminal: "alacritty";
     sort: true;
     sorting-method: "fzf";
@@ -7,14 +8,44 @@ configuration {
     display-window: "wind";
     display-run: " run";
     display-ssh: " shh";
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
 }
 
-@theme "gruvbox"
+window{
+    anchor:     north;
+    y-offset:   calc(-100% - 7em);
+}
+
+mainbox {
+    children: [input-box, listview];
+}
+
+input-box {
+    expand:         false;
+    children:       [inputbar, message];
+    padding:        0.5em ;
+    border-radius:  1em 1em 0 1em;
+    spacing:        0.5em;
+}
+
+inputbar {
+    spacing:    0;
+    children:   [prompt, textbox-prompt-sep, entry];
+}
+prompt {
+    text-color: var(prompt-mode-color);
+}
+textbox-prompt-sep {
+    expand:     false;
+    str:        " ❯ ";
+    text-color: var(prompt-sep-color);
+}
+entry {
+    cursor-width:   1ch;
+    blink:          false;
+}
+
+listview {
+    lines:          6;
+    border-radius:  0 0 1em 1em;
+    margin:         0 0 0 4ch;
+}

@@ -1,0 +1,9 @@
+@theme "common"
+
+mainbox {
+    children: [listview];
+}
+
+listview {
+    border-radius:  1em;
+}
