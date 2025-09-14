@@ -1,0 +1,26 @@
+#! /usr/bin/zsh
+
+everything='[e]verything'
+window='[w]indow'
+display='[d]isplay'
+rectangle='[r]ectangle'
+colorpicker='[c]olorpicker'
+selected_option=$(rofi-menu screenshot $everything $window $display $rectangle $colorpicker)
+
+case $selected_option in
+    $everything)
+        ksnip --fullscreen
+        ;;
+    $window)
+        ksnip --active
+        ;;
+    $display)
+        ksnip --current
+        ;;
+    $rectangle)
+        ksnip --rectarea
+        ;;
+    $colorpicker)
+        xcolor --selection
+        ;;
+esac

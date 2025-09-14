@@ -1,0 +1,26 @@
+#! /usr/bin/zsh
+
+picom='[p]icom'
+polybar='p[o]lybar'
+autorandr='[a]utorandr'
+darkman='[d]arkman'
+feh='[f]eh'
+selected_option=$(rofi-menu "utilities" $picom $polybar $autorandr $darkman $feh)
+
+case $selected_option in
+    $picom)
+        toggle-picom
+        ;;
+    $polybar)
+        start-polybar
+        ;;
+    $autorandr)
+        autorandr --change
+        ;;
+    $darkman)
+        darkman toggle
+        ;;
+    $feh)
+        ~/.fehbg
+        ;;
+esac

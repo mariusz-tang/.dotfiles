@@ -1,0 +1,40 @@
+#! /usr/bin/zsh
+
+terminal='[t]erminal'
+browser='[b]rowser'
+steam='[s]team'
+discord='[d]iscord'
+music='[m]usic'
+files='[f]iles'
+selected_option=$(rofi-menu "frequently used applications" $terminal $browser $steam $discord $music $files)
+
+function switch_to_workspace {
+    local workpace_number=$1
+    i3-msg "workspace --no-auto-back-and-forth number $workpace_number"
+}
+
+case $selected_option in
+    $terminal)
+        switch_to_workspace 1
+        alacritty -e tmux
+        ;;
+    $browser)
+        switch_to_workspace 2
+        zen-browser
+        ;;
+    $steam)
+        switch_to_workspace 5
+        steam
+        ;;
+    $discord)
+        switch_to_workspace 3
+        discord
+        ;;
+    $music)
+        switch_to_workspace 4
+        spotify-launcher
+        ;;
+    $files)
+        alacritty -e yazi
+        ;;
+esac
