@@ -15,23 +15,23 @@ function switch_to_workspace {
 
 case $selected_option in
     $terminal)
-        switch_to_workspace 1
+        switch_to_workspace "1: "
         alacritty -e tmux
         ;;
     $browser)
-        switch_to_workspace 2
+        switch_to_workspace "2: 󰈹"
         zen-browser
         ;;
     $steam)
-        switch_to_workspace 5
+        switch_to_workspace "5: "
         steam
         ;;
     $discord)
-        switch_to_workspace 3
+        switch_to_workspace "3: "
         discord
         ;;
     $music)
-        switch_to_workspace 4
+        switch_to_workspace "4: "
         spotify-launcher
         ;;
     $files)
