@@ -26,9 +26,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# tmux start command.
-set $tmux tmux new-session -A -s default
-
 include ~/.config/i3/config.d/assignments.conf
 include ~/.config/i3/config.d/colors.conf
 include ~/.config/i3/config.d/keybinds.conf

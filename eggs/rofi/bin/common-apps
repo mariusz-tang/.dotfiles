@@ -16,7 +16,7 @@ function switch_to_workspace {
 case $selected_option in
     $terminal)
         switch_to_workspace "1: "
-        alacritty -e tmux
+        alacritty -e tmux new-session -A -s default
         ;;
     $browser)
         switch_to_workspace "2: 󰈹"
