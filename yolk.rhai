@@ -7,8 +7,7 @@ export let eggs = #{
     darkman: #{
         targets: #{
             darkman: "~/.config/darkman",
-            lightmode: "~/.local/share/light-mode.d",
-            darkmode: "~/.local/share/dark-mode.d",
+            scripts: "~/.local/share/darkman",
             bin: "~/bin",
         },
         strategy: "merge",
