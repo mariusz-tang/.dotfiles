@@ -22,3 +22,8 @@ desc = "Go ~/documents"
 on = [ "g", "p" ]
 run = 'cd ~/projects'
 desc = "Go ~/projects"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "u" ]
+run = 'cd ~/documents/uni'
+desc = "Go ~/documents/uni"
