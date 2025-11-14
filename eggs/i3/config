@@ -50,6 +50,9 @@ exec --no-startup-id ibus-daemon -rxRd
 # Notifications
 exec --no-startup-id dunst -startup_notification
 
+# Bars
+exec --no-startup-id start-polybar
+
 # Startup apps
 exec --no-startup-id zen-browser
 exec --no-startup-id discord

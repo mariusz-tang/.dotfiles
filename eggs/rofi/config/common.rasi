@@ -3,7 +3,7 @@ configuration {
     monitor: "primary";
 }
 
-@import "colors/light-dark"
+@import "colors/dark"
 @import "colors/common"
 
 * {
