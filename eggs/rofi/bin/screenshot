@@ -7,6 +7,9 @@ rectangle='[r]ectangle'
 colorpicker='[c]olorpicker'
 selected_option=$(rofi-menu screenshot $everything $window $display $rectangle $colorpicker)
 
+# Wait for rofi window closing animation to finish.
+sleep 0.11
+
 case $selected_option in
     $everything)
         ksnip --fullscreen
