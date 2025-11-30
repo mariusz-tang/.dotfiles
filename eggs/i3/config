@@ -35,7 +35,8 @@ title_align center
 # Removed title bars from split containers.
 default_border none
 
-gaps inner 30
+gaps top -10
+gaps inner 10
 
 # Theme-switching
 exec --no-startup-id darkman run
