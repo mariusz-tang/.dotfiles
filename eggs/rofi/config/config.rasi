@@ -25,6 +25,8 @@ input-box {
     padding:        0.5em ;
     border-radius:  1em 1em 0 1em;
     spacing:        0.5em;
+    border: 2px;
+    border-color: var(foreground);
 }
 
 inputbar {
@@ -48,4 +50,5 @@ listview {
     lines:          6;
     border-radius:  0 0 1em 1em;
     margin:         0 0 0 4ch;
+    border: 0 2px 2px 2px;
 }

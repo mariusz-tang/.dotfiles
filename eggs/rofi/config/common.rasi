@@ -50,6 +50,8 @@ mainbox {
 listview {
     spacing:        0;
     fixed-height:   false;
+    border: 2px;
+    border-color: var(foreground);
 }
 
 element {
