@@ -1,6 +1,4 @@
 [global]
-    follow = mouse
-
     ### Geometry ###
     width = (0, 500)
     height = (0, 300)
