@@ -38,6 +38,9 @@ default_border none
 gaps top -10
 gaps inner 10
 
+popup_during_fullscreen leave_fullscreen
+focus_on_window_activation focus
+
 # Theme-switching
 exec --no-startup-id darkman run
 exec --no-startup-id systemctl start --user xsettingsd
