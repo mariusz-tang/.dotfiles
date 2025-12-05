@@ -1,0 +1,36 @@
+#! /usr/bin/zsh
+
+app_name="Battery"
+
+wait_time=1
+low_threshold=20
+
+function show_notification {
+    notify-send --app-name $app_name --expire-time 2000 --hint string:x-dunst-stack-tag:$app_name $1 $2
+}
+
+while true; do
+    # Include only the main battery, ignoring the extra battery that appears
+    # near full charge.
+    battery_info=$(acpi --battery | awk '!/rate information unavailable/')
+    charging_state=$(echo $battery_info | rg '(Disc|C)harging|Full' -o)
+    charge_value=$(echo $battery_info | rg '\d+%' -o | rg '\d+' -o)
+
+    if [[ $charging_state == "Discharging" && $charge_value -le $low_threshold && ( $charge_value != $old_charge_value || $charging_state != $old_charging_state )]]; then
+        # Show low battery notification if discharging and below low_threshold.
+        show_notification "LOW BATTERY ($charge_value%)" --urgency=critical
+    elif [[ $charging_state != $old_charging_state ]]; then
+        if [[ $charging_state == "Charging" ]]; then
+            show_notification " Charging"
+        elif [[ $charging_state == "Discharging" ]]; then
+            show_notification " Discharging"
+        elif [[ $charging_state == "Full" ]]; then
+            show_notification " Full"
+        fi
+    fi
+
+    old_charging_state=$charging_state
+    old_charge_value=$charge_value
+    sleep $wait_time
+done
+

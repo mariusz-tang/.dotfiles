@@ -68,3 +68,8 @@
     appname = "Media Control"
     format = "%s"
     alignment = center
+
+[Battery]
+    appname = "Battery"
+    format = "%s"
+    alignment = center
