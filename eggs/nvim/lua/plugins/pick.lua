@@ -5,7 +5,6 @@ return {
     dependencies = { "nvim-mini/mini.icons", "nvim-mini/mini.extra" },
     opts = {
       mappings = {
-        paste = "<C-P>",
         refine = "<C-r>",
       },
     },
