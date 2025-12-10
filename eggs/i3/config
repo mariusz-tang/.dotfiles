@@ -27,7 +27,6 @@ set $ws9 "9"
 set $ws10 "10"
 
 include ~/.config/i3/config.d/assignments.conf
-include ~/.config/i3/config.d/colors.conf
 include ~/.config/i3/config.d/keybinds.conf
 
 title_align center
