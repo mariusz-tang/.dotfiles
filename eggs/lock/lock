@@ -7,6 +7,9 @@ AQUA="#8ec07cff"
 BACKGROUND="#282828ff"
 FOREGROUND="#ebdbb2ff"
 
+# Wait for rofi animation to finish
+sleep 0.16
+
 i3lock \
 --insidever-color=$BACKGROUND   \
 --ringver-color=$BLUE           \
