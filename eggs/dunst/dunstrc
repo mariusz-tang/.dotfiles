@@ -30,7 +30,7 @@
     gap_size = 20
 
     background = "#282828"
-    foreground = "#ebdbb2"
+    foreground = "#fbf1c7"
     frame_color = "#fabd2f"
 
     sort = yes
@@ -59,7 +59,7 @@
 
 [urgency_critical]
     frame_width = 3
-    frame_color = "#fb4934"
+    frame_color = "#fabd2f"
     timeout = 0
     override_pause_level = 60
     default_icon = dialog-warning
