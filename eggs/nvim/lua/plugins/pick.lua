@@ -4,6 +4,9 @@ return {
     version = false,
     dependencies = { "nvim-mini/mini.icons", "nvim-mini/mini.extra" },
     opts = {
+      options = {
+        content_from_bottom = true,
+      },
       mappings = {
         refine = "<C-r>",
       },
