@@ -6,7 +6,7 @@
     offset = (20, 60)
     scale = 1
     notification_limit = 20
-    corner_radius = 10
+    corner_radius = 15
     frame_width = 2
 
     ### Progress bar ###
