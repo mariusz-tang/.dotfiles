@@ -21,8 +21,6 @@
 
     indicate_hidden = yes
 
-    transparency = 10
-
     padding = 10
     horizontal_padding = 10
     text_icon_padding = 10
