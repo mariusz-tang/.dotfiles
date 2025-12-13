@@ -4,13 +4,24 @@ theme_name=$1
 
 if [[ $theme_name = dark ]]; then
     gtk_suffix='-dark'
+
     dunst_bg='#282828'
     dunst_fg='#fbf1c7'
     dunst_accent='#fabd2f'
+
+    tmux_bg1='#3c3836'
+    tmux_bg2='#504945'
+    tmux_fg1='#ebdbb2'
+    tmux_fg2='#a89984'
 else
     dunst_bg='#fbf1c7'
     dunst_fg='#282828'
     dunst_accent='#b57614'
+
+    tmux_bg1='#ebdbb2'
+    tmux_bg2='#d5c4a1'
+    tmux_fg1='#3c3836'
+    tmux_fg2='#7c6f64'
 fi
 
 function replace {
@@ -48,3 +59,10 @@ replace 'foreground = "#[0-9a-f]\{6\}"' 'foreground = "'${dunst_fg}'"' ~/.config
 replace 'highlight = "#[0-9a-f]\{6\}"' 'highlight = "'${dunst_accent}'"' ~/.config/dunst/dunstrc
 replace 'frame_color = "#[0-9a-f]\{6\}"' 'frame_color = "'${dunst_accent}'"' ~/.config/dunst/dunstrc
 dunstctl reload
+
+# Tmux.
+replace 'status-style bg=#[0-9a-f]\{6\}' 'status-style bg='${tmux_bg1} ~/.config/tmux/tmux.conf
+replace 'status-right "#\[bg=#[0-9a-f]\{6\},fg=#[0-9a-f]\{6\},nobold\] #{user} #\[default\] #h "' 'status-right "#[bg='${tmux_bg2}',fg='${tmux_fg1}',nobold] #{user} #[default] #h "' ~/.config/tmux/tmux.conf
+replace 'window-status-format "#{?window_bell_flag,#\[bg=magenta#,fg=black\],#\[bg=#[0-9a-f]\{6\}#,fg=#[0-9a-f]\{6\}\]}' 'window-status-format "#{?window_bell_flag,#[bg=magenta#,fg=black],#[bg='${tmux_bg2}'#,fg='${tmux_fg1}']}' ~/.config/tmux/tmux.conf
+replace 'window-status-style bg=#[0-9a-f]\{6\},fg=#[0-9a-f]\{6\}' 'window-status-style bg='${tmux_bg1}',fg='${tmux_fg2} ~/.config/tmux/tmux.conf
+tmux source-file ~/.config/tmux/tmux.conf
