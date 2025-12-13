@@ -35,6 +35,8 @@ function replace {
     sed 's'${delimiter}${original}${delimiter}${target}${delimiter} --in-place ${file}
 }
 
+hex_color='#[0-9a-f]\{6\}'
+
 # GTK theme.
 xset-gtk-theme Adwaita${gtk_suffix}
 
@@ -54,15 +56,15 @@ replace '@import "colors/\(dark\|light\)"' '@import "colors/'${theme_name}'"' ~/
 replace 'unfocused-shader-\(light\|dark\)\.glsl' 'unfocused-shader-'${theme_name}'.glsl'  ~/.config/picom/picom.conf
 
 # Dunst.
-replace 'background = "#[0-9a-f]\{6\}"' 'background = "'${dunst_bg}'"' ~/.config/dunst/dunstrc
-replace 'foreground = "#[0-9a-f]\{6\}"' 'foreground = "'${dunst_fg}'"' ~/.config/dunst/dunstrc
-replace 'highlight = "#[0-9a-f]\{6\}"' 'highlight = "'${dunst_accent}'"' ~/.config/dunst/dunstrc
-replace 'frame_color = "#[0-9a-f]\{6\}"' 'frame_color = "'${dunst_accent}'"' ~/.config/dunst/dunstrc
+replace 'background = "'${hex_color}'"' 'background = "'${dunst_bg}'"' ~/.config/dunst/dunstrc
+replace 'foreground = "'${hex_color}'"' 'foreground = "'${dunst_fg}'"' ~/.config/dunst/dunstrc
+replace 'highlight = "'${hex_color}'"' 'highlight = "'${dunst_accent}'"' ~/.config/dunst/dunstrc
+replace 'frame_color = "'${hex_color}'"' 'frame_color = "'${dunst_accent}'"' ~/.config/dunst/dunstrc
 dunstctl reload
 
 # Tmux.
-replace 'status-style bg=#[0-9a-f]\{6\}' 'status-style bg='${tmux_bg1} ~/.config/tmux/tmux.conf
-replace 'status-right "#\[bg=#[0-9a-f]\{6\},fg=#[0-9a-f]\{6\},nobold\] #{user} #\[default\] #h "' 'status-right "#[bg='${tmux_bg2}',fg='${tmux_fg1}',nobold] #{user} #[default] #h "' ~/.config/tmux/tmux.conf
-replace 'window-status-format "#{?window_bell_flag,#\[bg=magenta#,fg=black\],#\[bg=#[0-9a-f]\{6\}#,fg=#[0-9a-f]\{6\}\]}' 'window-status-format "#{?window_bell_flag,#[bg=magenta#,fg=black],#[bg='${tmux_bg2}'#,fg='${tmux_fg1}']}' ~/.config/tmux/tmux.conf
-replace 'window-status-style bg=#[0-9a-f]\{6\},fg=#[0-9a-f]\{6\}' 'window-status-style bg='${tmux_bg1}',fg='${tmux_fg2} ~/.config/tmux/tmux.conf
+replace 'status-style bg='${hex_color}'' 'status-style bg='${tmux_bg1} ~/.config/tmux/tmux.conf
+replace 'status-right "#\[bg='${hex_color}',fg='${hex_color}',nobold\] #{user} #\[default\] #h "' 'status-right "#[bg='${tmux_bg2}',fg='${tmux_fg1}',nobold] #{user} #[default] #h "' ~/.config/tmux/tmux.conf
+replace 'window-status-format "#{?window_bell_flag,#\[bg=magenta#,fg=black\],#\[bg='${hex_color}'#,fg='${hex_color}'\]}' 'window-status-format "#{?window_bell_flag,#[bg=magenta#,fg=black],#[bg='${tmux_bg2}'#,fg='${tmux_fg1}']}' ~/.config/tmux/tmux.conf
+replace 'window-status-style bg='${hex_color}',fg='${hex_color}'' 'window-status-style bg='${tmux_bg1}',fg='${tmux_fg2} ~/.config/tmux/tmux.conf
 tmux source-file ~/.config/tmux/tmux.conf
