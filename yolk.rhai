@@ -11,7 +11,6 @@ export let eggs = #{
         main_file: "scripts/set-theme.sh",
         strategy: "merge",
         targets: #{
-            bin: "~/bin",
             darkman: "~/.config/darkman",
             scripts: "~/.local/share/darkman",
         },

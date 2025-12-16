@@ -37,9 +37,6 @@ function replace {
 
 hex_color='#[0-9a-f]\{6\}'
 
-# GTK theme.
-xset-gtk-theme Adwaita${gtk_suffix}
-
 # Background.
 feh --bg-scale $(xdg-user-dir PICTURES)/backgrounds/${theme_name}
 
