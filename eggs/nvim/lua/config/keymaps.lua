@@ -11,6 +11,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "gY", '"+Y', { desc = "Copy rest of line to system clipboard" })
+vim.keymap.set("n", "gP", '"+P', { desc = "Paste from system clipboard" })
 
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_D', { desc = "Delete into void register" })
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Paste over and discard" })
