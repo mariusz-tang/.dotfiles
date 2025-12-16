@@ -4,35 +4,35 @@ export let eggs = #{
         targets: "~/.config/alacritty",
     },
     autorandr: #{
-        targets: "~/.config/autorandr/",
         strategy: "merge",
+        targets: "~/.config/autorandr/",
     },
     darkman: #{
         main_file: "scripts/set-theme.sh",
+        strategy: "merge",
         targets: #{
+            bin: "~/bin",
             darkman: "~/.config/darkman",
             scripts: "~/.local/share/darkman",
-            bin: "~/bin",
         },
-        strategy: "merge",
     },
     dunst: "~/.config/dunst",
     git: "~/.config/git",
     gnupg: #{
-        targets: "~/.gnupg",
         strategy: "merge",
+        targets: "~/.gnupg",
     },
     i3: #{
         main_file: "config",
         targets: "~/.config/i3",
     },
     lock: #{
-        targets: "~/bin",
         strategy: "merge",
+        targets: "~/bin",
     },
     "media-control": #{
-        targets: "~/bin",
         strategy: "merge",
+        targets: "~/bin",
     },
     nvim: #{
         main_file: "lua",
@@ -40,51 +40,51 @@ export let eggs = #{
     },
     picom: #{
         main_file: "picom/picom.conf",
-        targets: #{
-            picom: "~/.config/picom",
-            bin: "~/bin",
-        },
         strategy: "merge",
+        targets: #{
+            bin: "~/bin",
+            picom: "~/.config/picom",
+        },
     },
     polybar: #{
         main_file: "polybar/config.ini",
-        targets: #{
-            polybar: "~/.config/polybar",
-            bin: "~/bin",
-        },
         strategy: "merge",
+        targets: #{
+            bin: "~/bin",
+            polybar: "~/.config/polybar",
+        },
     },
     rofi: #{
         main_file: "bin",
+        strategy: "merge",
         targets: #{
             bin: "~/bin",
-            config: "~/.config/rofi"
+            config: "~/.config/rofi",
         },
-        strategy: "merge",
     },
     shell: #{
         main_file: "zsh/.zshrc",
-        targets: #{
-            zsh: "~/.config/zsh",
-            bin: "~/bin",
-            ohmyposh: "~/.config/ohmyposh"
-        },
         strategy: "merge",
+        targets: #{
+            bin: "~/bin",
+            ohmyposh: "~/.config/ohmyposh",
+            zsh: "~/.config/zsh",
+        },
     },
     ssh: #{
+        strategy: "merge",
         targets: "~/.ssh",
-        strategy: "merge"
     },
     tmux: #{
         main_file: "tmux/tmux.conf",
         targets:#{
+            sessionizer: "~/bin/sessionizer",
             tmux: "~/.config/tmux",
-            sessionizer: "~/bin/sessionizer"
         },
     },
     "user-dirs": #{
-        targets: "~/.config",
         strategy: "merge",
+        targets: "~/.config",
     },
     "xdg-desktop-portal": "~/.config/xdg-desktop-portal",
     "xdg-desktop-portal-termfilechooser": "~/.config/xdg-desktop-portal-termfilechooser",
