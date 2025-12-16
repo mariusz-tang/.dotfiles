@@ -29,8 +29,6 @@ set $ws10 "10"
 include ~/.config/i3/config.d/assignments.conf
 include ~/.config/i3/config.d/keybinds.conf
 
-title_align center
-
 # Removed title bars from split containers.
 default_border none
 
