@@ -1,6 +1,6 @@
 # vim: set filetype=gitconfig :
 [include]
-	path = ~/.gitsigningkey
+	path = ./.gitsigningkey
 
 [user]
 	name = Mariusz Tang
