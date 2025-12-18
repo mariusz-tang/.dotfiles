@@ -19,7 +19,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
-~/bin/greet-with-kuro
+~/.config/zsh/greeter/greet-with-kuro
 
 # Keybinds
 bindkey -e
@@ -100,9 +100,9 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # yazi
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
 }

@@ -1,13 +1,10 @@
-local colorscheme_repo = "ellisonleao/gruvbox.nvim"
-local colorscheme_name = "gruvbox"
-
 return {
   {
-    colorscheme_repo,
+    "ellisonleao/gruvbox.nvim",
     lazy = false,
     priority = 1000,
     init = function()
-      vim.cmd.colorscheme(colorscheme_name)
+      vim.cmd.colorscheme("gruvbox")
     end,
   },
   -- Syncs light/dark theme switching with system theme.

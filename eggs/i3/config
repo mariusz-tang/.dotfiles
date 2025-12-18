@@ -51,7 +51,7 @@ exec --no-startup-id ibus-daemon -rxRd
 exec --no-startup-id dunst -startup_notification
 
 # Battery state notifications
-exec --no-startup-id ~/.config/i3/monitor-battery
+exec --no-startup-id ~/.config/i3/scripts/monitor-battery
 
 # Bar
 exec --no-startup-id start-polybar
