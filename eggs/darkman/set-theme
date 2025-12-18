@@ -40,9 +40,6 @@ hex_color='#[0-9a-f]\{6\}'
 # Background.
 feh --bg-scale $(xdg-user-dir PICTURES)/backgrounds/${theme_name}
 
-# Polybar.
-replace 'inherit = \(dark\|light\)-colors' 'inherit = '${theme_name}'-colors' ~/.config/polybar/config.ini
-
 # Alacritty.
 replace 'gruvbox_\(dark\|light\).toml' 'gruvbox_'${theme_name}'.toml' ~/.config/alacritty/alacritty.toml +
 
