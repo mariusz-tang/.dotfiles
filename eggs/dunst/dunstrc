@@ -1,3 +1,4 @@
+# vim: set filetype=gitconfig :
 [global]
     ### Geometry ###
     width = (0, 500)
