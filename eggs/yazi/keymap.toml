@@ -11,19 +11,19 @@ desc = "cd to root of current git repository"
 [[mgr.prepend_keymap]]
 on = [ "g", "d" ]
 run = 'cd ~/downloads'
-desc = "Go ~/downloads"
+desc = "Go to downloads"
 
 [[mgr.prepend_keymap]]
 on = [ "g", "D" ]
 run = 'cd ~/documents'
-desc = "Go ~/documents"
+desc = "Go to documents"
 
 [[mgr.prepend_keymap]]
 on = [ "g", "p" ]
 run = 'cd ~/projects'
-desc = "Go ~/projects"
+desc = "Go to projects"
 
 [[mgr.prepend_keymap]]
 on = [ "g", "u" ]
 run = 'cd ~/documents/uni'
-desc = "Go ~/documents/uni"
+desc = "Go to uni documents"
