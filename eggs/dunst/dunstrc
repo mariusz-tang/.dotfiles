@@ -18,7 +18,7 @@
     progress_bar_max_width = 300
     progress_bar_corner_radius = 5
     progress_bar_corners = all
-    highlight = "#fabd2f"
+    highlight = "#fabd2f" # {< replace_color(colors.brightyellow) >}
 
     indicate_hidden = yes
 
@@ -28,9 +28,9 @@
 
     gap_size = 20
 
-    background = "#282828"
-    foreground = "#fbf1c7"
-    frame_color = "#fabd2f"
+    background = "#282828" # {< replace_color(colors.bg) >}
+    foreground = "#fbf1c7" # {< replace_color(colors.fg) >}
+    frame_color = "#fabd2f" # {< replace_color(colors.brightyellow) >}
 
     sort = yes
 

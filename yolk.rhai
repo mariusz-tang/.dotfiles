@@ -14,7 +14,10 @@ export let eggs = #{
             "set-theme": "~/.local/share/darkman/set-theme",
         },
     },
-    dunst: "~/.config/dunst",
+    dunst: #{
+        targets: "~/.config/dunst",
+        templates: ["dunstrc"],
+    },
     git: "~/.config/git",
     gnupg: #{
         strategy: "merge",
