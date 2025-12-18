@@ -3,8 +3,6 @@
 theme_name=$1
 
 if [[ $theme_name = dark ]]; then
-    gtk_suffix='-dark'
-
     tmux_bg1='#3c3836'
     tmux_bg2='#504945'
     tmux_fg1='#ebdbb2'
