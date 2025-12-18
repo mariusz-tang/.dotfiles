@@ -37,7 +37,7 @@ export let eggs = #{
         },
     },
     polybar: #{
-        main_file: "polybar/config.ini",
+        main_file: "config.ini",
         targets: #{
             ".": "~/.config/polybar",
             "start-polybar": "~/bin/start-polybar",
