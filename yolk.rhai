@@ -1,3 +1,7 @@
+import "theme" as theme;
+
+export let colors = theme::colors;
+
 export let eggs = #{
     alacritty: #{
         main_file: "alacritty.toml",

@@ -65,3 +65,6 @@ replace 'status-right "#\[bg='${hex_color}',fg='${hex_color}',nobold\] #{user} #
 replace 'window-status-format "#{?window_bell_flag,#\[bg=magenta#,fg=black\],#\[bg='${hex_color}'#,fg='${hex_color}'\]}' 'window-status-format "#{?window_bell_flag,#[bg=magenta#,fg=black],#[bg='${tmux_bg2}'#,fg='${tmux_fg1}']}' ~/.config/tmux/tmux.conf
 replace 'window-status-style bg='${hex_color}',fg='${hex_color}'' 'window-status-style bg='${tmux_bg1}',fg='${tmux_fg2} ~/.config/tmux/tmux.conf
 tmux source-file ~/.config/tmux/tmux.conf
+
+# Yolk templates.
+THEME=${theme_name} yolk sync
