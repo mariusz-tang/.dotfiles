@@ -16,6 +16,8 @@ case $selected_option in
         ;;
     $autorandr)
         autorandr --change
+        start-polybar
+        ~/.fehbg
         ;;
     $darkman)
         darkman toggle
