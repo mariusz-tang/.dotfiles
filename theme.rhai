@@ -96,7 +96,8 @@ let gruvbox_light = #{
 };
 
 export let colors;
-if io::env("THEME", "dark") == "light" {
+export let theme = "dark";
+if theme == "light" {
     colors = gruvbox_light;
 } else {
     colors = gruvbox_dark;

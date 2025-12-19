@@ -1,6 +1,7 @@
 import "theme" as theme;
 
 export let colors = theme::colors;
+export let theme_name = theme::theme;
 
 export let eggs = #{
     alacritty: #{

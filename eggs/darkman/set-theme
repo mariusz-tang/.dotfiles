@@ -28,7 +28,8 @@ function replace {
 hex_color='#[0-9a-f]\{6\}'
 
 # Yolk templates.
-THEME=${theme_name} yolk sync
+replace 'let theme = "\(dark\|light\)"' 'let theme = "'${theme_name}'"' ~/.config/yolk/theme.rhai
+yolk sync
 
 # Background.
 feh --bg-scale $(xdg-user-dir PICTURES)/backgrounds/${theme_name}
