@@ -40,9 +40,6 @@ replace 'gruvbox_\(dark\|light\).toml' 'gruvbox_'${theme_name}'.toml' ~/.config/
 # Rofi.
 replace '@import "colors/\(dark\|light\)"' '@import "colors/'${theme_name}'"' ~/.config/rofi/common.rasi +
 
-# Picom.
-replace 'unfocused-shader-\(light\|dark\)\.glsl' 'unfocused-shader-'${theme_name}'.glsl'  ~/.config/picom/picom.conf
-
 # Dunst.
 dunstctl reload
 

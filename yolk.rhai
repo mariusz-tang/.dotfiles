@@ -39,6 +39,7 @@ export let eggs = #{
             ".": "~/.config/picom",
             "toggle-picom": "~/bin/toggle-picom",
         },
+        templates: ["picom.conf"],
     },
     polybar: #{
         main_file: "config.ini",
