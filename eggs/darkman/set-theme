@@ -2,18 +2,6 @@
 
 theme_name=$1
 
-if [[ $theme_name = dark ]]; then
-    tmux_bg1='#3c3836'
-    tmux_bg2='#504945'
-    tmux_fg1='#ebdbb2'
-    tmux_fg2='#a89984'
-else
-    tmux_bg1='#ebdbb2'
-    tmux_bg2='#d5c4a1'
-    tmux_fg1='#3c3836'
-    tmux_fg2='#7c6f64'
-fi
-
 function replace {
     original=$1
     target=$2
@@ -38,8 +26,4 @@ feh --bg-scale $(xdg-user-dir PICTURES)/backgrounds/${theme_name}
 dunstctl reload
 
 # Tmux.
-replace 'status-style bg='${hex_color}'' 'status-style bg='${tmux_bg1} ~/.config/tmux/tmux.conf
-replace 'status-right "#\[bg='${hex_color}',fg='${hex_color}',nobold\] #{user} #\[default\] #h "' 'status-right "#[bg='${tmux_bg2}',fg='${tmux_fg1}',nobold] #{user} #[default] #h "' ~/.config/tmux/tmux.conf
-replace 'window-status-format "#{?window_bell_flag,#\[bg=magenta#,fg=black\],#\[bg='${hex_color}'#,fg='${hex_color}'\]}' 'window-status-format "#{?window_bell_flag,#[bg=magenta#,fg=black],#[bg='${tmux_bg2}'#,fg='${tmux_fg1}']}' ~/.config/tmux/tmux.conf
-replace 'window-status-style bg='${hex_color}',fg='${hex_color}'' 'window-status-style bg='${tmux_bg1}',fg='${tmux_fg2} ~/.config/tmux/tmux.conf
 tmux source-file ~/.config/tmux/tmux.conf

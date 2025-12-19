@@ -74,6 +74,7 @@ export let eggs = #{
             ".": "~/.config/tmux",
             sessionizer: "~/bin/sessionizer",
         },
+        templates: ["tmux.conf"],
     },
     "user-dirs": #{ targets: #{ "user-dirs.dirs": "~/.config/user-dirs.dirs", }, },
     "xdg-desktop-portal": "~/.config/xdg-desktop-portal",
