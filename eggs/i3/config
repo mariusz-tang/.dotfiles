@@ -32,8 +32,9 @@ include ~/.config/i3/config.d/keybinds.conf
 # Removed title bars from split containers.
 default_border none
 
-gaps top -10
-gaps inner 10
+gaps top -15
+gaps bottom -2
+gaps inner 11
 
 popup_during_fullscreen leave_fullscreen
 focus_on_window_activation focus
