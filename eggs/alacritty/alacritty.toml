@@ -1,3 +1,4 @@
+# {# replace_re("light|dark", theme_name) #}
 general.import = [ "themes/themes/gruvbox_dark.toml" ]
 
 font.normal.family = "FiraCode Nerd Font Mono"

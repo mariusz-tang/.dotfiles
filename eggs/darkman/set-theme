@@ -34,9 +34,6 @@ yolk sync
 # Background.
 feh --bg-scale $(xdg-user-dir PICTURES)/backgrounds/${theme_name}
 
-# Alacritty.
-replace 'gruvbox_\(dark\|light\).toml' 'gruvbox_'${theme_name}'.toml' ~/.config/alacritty/alacritty.toml +
-
 # Dunst.
 dunstctl reload
 
