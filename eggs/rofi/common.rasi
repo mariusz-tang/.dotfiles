@@ -3,7 +3,8 @@ configuration {
     monitor: "primary";
 }
 
-@import "colors/light"
+// {# replace_re("light|dark", theme_name) #}
+@import "colors/dark"
 @import "colors/common"
 
 * {

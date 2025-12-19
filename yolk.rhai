@@ -56,6 +56,7 @@ export let eggs = #{
             ".": "~/.config/rofi",
             scripts: "~/bin",
         },
+        templates: ["common.rasi"],
     },
     scripts: #{
         // Miscellaneous scripts that don't belong in any other egg.

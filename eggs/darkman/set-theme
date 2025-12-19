@@ -37,9 +37,6 @@ feh --bg-scale $(xdg-user-dir PICTURES)/backgrounds/${theme_name}
 # Alacritty.
 replace 'gruvbox_\(dark\|light\).toml' 'gruvbox_'${theme_name}'.toml' ~/.config/alacritty/alacritty.toml +
 
-# Rofi.
-replace '@import "colors/\(dark\|light\)"' '@import "colors/'${theme_name}'"' ~/.config/rofi/common.rasi +
-
 # Dunst.
 dunstctl reload
 
