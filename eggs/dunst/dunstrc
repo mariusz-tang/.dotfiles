@@ -58,7 +58,7 @@
 
 [urgency_critical]
     frame_width = 3
-    frame_color = "#fabd2f"
+    frame_color = "#fb4934" # {< replace_color(colors.brightred) >}
     timeout = 0
     override_pause_level = 60
     default_icon = dialog-warning
