@@ -23,7 +23,7 @@ input-box {
     expand:         false;
     children:       [inputbar, message];
     padding:        0.5em ;
-    border-radius:  1em 1em 0 1em;
+    border-radius:  12px 12px 0 12px;
     spacing:        0.5em;
     border: 2px;
     border-color: var(foreground);
@@ -48,7 +48,7 @@ entry {
 
 listview {
     lines:          6;
-    border-radius:  0 0 1em 1em;
+    border-radius:  0 0 12px 12px;
     margin:         0 0 0 4ch;
     border: 0 2px 2px 2px;
 }

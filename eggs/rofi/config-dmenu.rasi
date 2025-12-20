@@ -10,7 +10,7 @@ mainbox {
 }
 
 listview {
-    border-radius:  1em;
+    border-radius:  12px;
 }
 
 message {
