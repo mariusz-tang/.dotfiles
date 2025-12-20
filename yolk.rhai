@@ -9,6 +9,7 @@ export let eggs = #{
         targets: "~/.config/alacritty",
         templates: ["alacritty.toml"],
     },
+    bat: "~/.config/bat",
     darkman: #{
         main_file: "set-theme",
         targets: #{
