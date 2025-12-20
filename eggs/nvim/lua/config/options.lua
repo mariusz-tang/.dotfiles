@@ -45,4 +45,4 @@ vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 
 -- Don't show redundant information
-vim.opt.shortmess:append("WcCS")
+vim.opt.shortmess:append("WcCSs")
