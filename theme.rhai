@@ -1,10 +1,12 @@
 let gruvbox = #{
+    black_h: "#1d2021",
     black0: "#282828",
     black1: "#3c3836",
     black2: "#504945",
     black3: "#665c54",
     black4: "#7c6f64",
     gray: "#928374",
+    white_h: "#f9f5d7",
     white0: "#fbf1c7",
     white1: "#ebdbb2",
     white2: "#d5c4a1",
@@ -35,6 +37,7 @@ let gruvbox = #{
 
 let gruvbox_dark = #{
     bg: gruvbox.black0,
+    bg_h: gruvbox.black_h,
     bg0: gruvbox.black0,
     bg1: gruvbox.black1,
     bg2: gruvbox.black2,
@@ -66,6 +69,7 @@ let gruvbox_dark = #{
 
 let gruvbox_light = #{
     bg: gruvbox.white0,
+    bg_h: gruvbox.white_h,
     bg0: gruvbox.white0,
     bg1: gruvbox.white1,
     bg2: gruvbox.white2,
