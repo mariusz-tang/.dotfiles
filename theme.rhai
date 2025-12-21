@@ -99,6 +99,7 @@ let gruvbox_light = #{
     brightorange: gruvbox.orange0,
 };
 
+export let base_colors = gruvbox;
 export let colors;
 export let theme = "dark";
 if theme == "light" {

@@ -1,5 +1,6 @@
 import "theme" as theme;
 
+export let base_colors = theme::base_colors;
 export let colors = theme::colors;
 export let theme_name = theme::theme;
 
