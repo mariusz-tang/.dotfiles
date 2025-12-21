@@ -10,6 +10,11 @@ export let eggs = #{
         templates: ["alacritty.toml"],
     },
     bat: "~/.config/bat",
+    discord: #{
+        strategy: "merge",
+        targets: "~/.config/BetterDiscord/data/stable",
+        templates: ["custom.css"],
+    },
     darkman: #{
         main_file: "set-theme",
         targets: #{
