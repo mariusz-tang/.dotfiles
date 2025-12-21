@@ -89,3 +89,14 @@ export let eggs = #{
         targets: "~/.config/zsh",
     },
 };
+
+fn replace_rgb(color) {
+    // Replaces an rgb color of the form rrr,ggg,bbb.
+    let text = get_yolk_text();
+    let color_str = utils::color_hex_to_rgb_str(color);
+    color_str.remove("rgb(");
+    color_str.remove(" ");
+    color_str.remove(")");
+    let result = template::replace_re(`(\d{1,3},){2}\d{1,3}`, color_str);
+    return result;
+}
