@@ -90,6 +90,12 @@ export let eggs = #{
         main_file: ".",
         targets: "~/.config/yazi",
     },
+    "zen-browser": #{
+        main_file: "myprofile/chrome/userChrome.css",
+        strategy: "merge",
+        targets: "~/.zen",
+        templates: ["myprofile/chrome/userChrome.css"],
+    },
     zsh: #{
         main_file: ".zshrc",
         targets: "~/.config/zsh",

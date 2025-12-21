@@ -1,0 +1,93 @@
+/* We have to handle light/dark switching here since we do not have live-switching. */
+:root {
+  --kuro-white1: #ebdbb2; /* {< replace_color(base_colors.white1) >} */
+  --kuro-white0: #fbf1c7; /* {< replace_color(base_colors.white0) >} */
+  --kuro-white_h: #f9f5d7; /* {< replace_color(base_colors.white_h) >} */
+  --kuro-gray: #928374; /* {< replace_color(base_colors.gray) >} */
+  --kuro-black1: #3c3836; /* {< replace_color(base_colors.black1) >} */
+  --kuro-black0: #282828; /* {< replace_color(base_colors.black0) >} */
+  --kuro-black_h: #1d2021; /* {< replace_color(base_colors.black_h) >} */
+  
+  --kuro-bg1: var(--kuro-white1);
+  --kuro-bg: var(--kuro-white0);
+  --kuro-bg_h: var(--kuro-white_h);
+  --kuro-fg1: var(--kuro-black1);
+  --kuro-fg: var(--kuro-black0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --kuro-bg1: var(--kuro-black1);
+    --kuro-bg: var(--kuro-black0);
+    --kuro-bg_h: var(--kuro-black_h);
+    --kuro-fg1: var(--kuro-white1);
+    --kuro-fg: var(--kuro-white0);
+  }
+}
+
+:root {
+  font-family: "FiraCode Nerd Font Mono" !important;
+  font-weight: 500 !important;
+  
+  --zen-primary-color: var(--kuro-bg) !important;
+  --zen-background-opacity: 1 !important;
+  --zen-grainy-background-opacity: 0.1 !important;
+  --zen-main-browser-background: var(--kuro-bg) !important;
+  --zen-main-browser-background-old: var(--kuro-bg) !important; /* dark1 */
+  
+  --toolbox-textcolor: var(--kuro-fg) !important;
+  
+  --toolbarbutton-icon-fill: var(--kuro-gray) !important;
+  --toolbar-color: var(--kuro-fg) !important;
+}
+
+#urlbar[open] > #urlbar-background {
+  background-color: var(--kuro-bg) !important;
+}
+
+.urlbarView-row:not([selected]) {
+  color: var(--kuro-fg) !important;
+  
+  .urlbarView-url {
+    color: var(--kuro-gray) !important;
+  }
+}
+
+.urlbarView-row[selected] {
+  background-color: var(--kuro-fg) !important;
+  
+  *, .urlbarView-title-separator:before {
+    color: var(--kuro-bg) !important;
+  }
+  
+  .urlbarView-favicon {
+    background-color: var(--kuro-bg) !important;
+  }
+  
+  .urlbarView-title {
+    font-weight: bold !important;
+  }
+}
+
+.urlbar-input {
+  color: var(--kuro-fg) !important;
+}
+
+.urlbar-icon {
+  color: var(--kuro-gray) !important;
+}
+
+#titlebar:before {
+  background-color: var(--kuro-bg) !important;
+}
+
+/* Empty tab window color. */
+:root:not([inDOMFullscreen="true"]):not([chromehidden~="location"]):not([chromehidden~="toolbar"]) {
+  & #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer, & #tabbrowser-tabpanels[dragging-split="true"] {
+    &.browserSidebarContainer {
+      & browser[transparent="true"] {
+        background: light-dark(var(--kuro-bg_h), var(--kuro-bg1)) !important;
+      }
+    }
+  }
+}
