@@ -10,11 +10,6 @@ configuration {
     display-ssh: " shh";
 }
 
-window{
-    anchor:     north;
-    y-offset:   calc(-100% - 7em);
-}
-
 mainbox {
     children: [input-box, listview];
 }
@@ -22,24 +17,13 @@ mainbox {
 input-box {
     expand:         false;
     children:       [inputbar, message];
-    padding:        0.5em ;
-    border-radius:  12px 12px 0 12px;
+    padding:        0.5em;
     spacing:        0.5em;
-    border: 2px;
-    border-color: var(foreground);
 }
 
 inputbar {
     spacing:    0;
     children:   [prompt, textbox-prompt-sep, entry];
-}
-prompt {
-    text-color: var(prompt-mode-color);
-}
-textbox-prompt-sep {
-    expand:     false;
-    str:        " ❯ ";
-    text-color: var(prompt-sep-color);
 }
 entry {
     cursor-width:   1ch;
@@ -47,8 +31,6 @@ entry {
 }
 
 listview {
+    fixed-height: true;
     lines:          6;
-    border-radius:  0 0 12px 12px;
-    margin:         0 0 0 4ch;
-    border: 0 2px 2px 2px;
 }

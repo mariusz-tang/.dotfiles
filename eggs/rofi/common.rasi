@@ -36,12 +36,7 @@ configuration {
 }
 
 window {
-    // This usage of border allows us to have dynamic line height while dimming
-    // the rest of the screen, which I could not seem to do with fullscreen.
-    width:              100%;
-    border:             100% calc((100% - 40ch)/2);
-    border-color:       var(overlay-color);
-    background-color:   transparent;
+    width:              40ch;
 }
 
 mainbox {
@@ -51,8 +46,6 @@ mainbox {
 listview {
     spacing:        0;
     fixed-height:   false;
-    border: 2px;
-    border-color: var(foreground);
 }
 
 element {
@@ -98,4 +91,13 @@ element alternate.urgent {
 element selected.urgent {
     background-color:   var(selected-urgent-background);
     text-color:         var(selected-urgent-foreground);
+}
+
+prompt {
+    text-color: var(prompt-mode-color);
+}
+textbox-prompt-sep {
+    expand:     false;
+    str:        " ❯ ";
+    text-color: var(prompt-sep-color);
 }

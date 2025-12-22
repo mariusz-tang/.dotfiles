@@ -1,26 +1,21 @@
 @theme "common"
 
-window {
-    // Center the listview rather than the entire window.
-    y-offset: -1em;
-}
-
 mainbox {
-    children: [message, listview];
+    children: [message-bar, listview];
 }
 
-listview {
-    border-radius:  12px;
+message-bar {
+    expand: false;
+    orientation: horizontal;
+    spacing:    0;
+    children:   [prompt, textbox-prompt-sep, message];
+    padding:        0.5em;
 }
-
 message {
-    margin: 0 0 1em 0;
-    border-radius: 12px;
-    border: 2px;
-    border-color: var(foreground);
+    expand: true;
 }
+
 textbox {
     background-color: inherit;
     text-color: inherit;
-    horizontal-align: 0.5;
 }
