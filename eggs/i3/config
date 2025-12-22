@@ -32,6 +32,7 @@ include ~/.config/i3/config.d/keybinds.conf
 # Removed title bars from split containers.
 default_border none
 
+# These gaps make it so alacritty is an integer number of characters wide.
 gaps top -15
 gaps bottom -2
 gaps inner 11
