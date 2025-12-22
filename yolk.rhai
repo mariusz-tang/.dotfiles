@@ -71,6 +71,14 @@ export let eggs = #{
         strategy: "merge",
         targets: "~/bin",
     },
+    spicetify: #{
+        strategy: "merge",
+        targets: "~/.config/spicetify",
+        templates: [
+            "Themes/theme/color.ini",
+            "Themes/theme/user.css",
+        ],
+    },
     ssh: #{
         strategy: "merge",
         targets: "~/.ssh",
@@ -104,11 +112,17 @@ export let eggs = #{
 
 fn replace_rgb(color) {
     // Replaces an rgb color of the form rrr,ggg,bbb.
-    let text = get_yolk_text();
     let color_str = utils::color_hex_to_rgb_str(color);
     color_str.remove("rgb(");
     color_str.remove(" ");
     color_str.remove(")");
     let result = template::replace_re(`(\d{1,3},){2}\d{1,3}`, color_str);
+    return result;
+}
+
+fn replace_hex_nohash(color) {
+    // Replace a hex color without the preceding hash symbol.
+    color.remove("#");
+    let result = template::replace_re(`[0-9a-f]{6}`, color);
     return result;
 }

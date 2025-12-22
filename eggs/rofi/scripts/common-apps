@@ -32,7 +32,7 @@ case $selected_option in
         ;;
     $music)
         switch_to_workspace "4: "
-        spotify-launcher
+        spicetify apply
         ;;
     $files)
         alacritty -e yazi
