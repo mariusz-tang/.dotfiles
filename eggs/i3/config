@@ -33,8 +33,8 @@ include ~/.config/i3/config.d/keybinds.conf
 default_border none
 
 # These gaps make it so alacritty is an integer number of characters wide.
-gaps top -15
-gaps bottom -2
+gaps top 4
+gaps bottom 4
 gaps inner 11
 
 popup_during_fullscreen leave_fullscreen
