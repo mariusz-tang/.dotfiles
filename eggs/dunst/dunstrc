@@ -4,11 +4,12 @@
     width = (0, 500)
     height = (0, 300)
     origin = top-right
-    offset = (20, 60)
+    offset = (22, 56)
     scale = 1
     notification_limit = 20
     corner_radius = 12
-    frame_width = 2
+    frame_width = 0
+    separator_color = "auto"
 
     ### Progress bar ###
     progress_bar = true
@@ -26,8 +27,6 @@
     horizontal_padding = 10
     text_icon_padding = 10
 
-    gap_size = 20
-
     background = "#282828" # {< replace_color(colors.bg) >}
     foreground = "#fbf1c7" # {< replace_color(colors.fg) >}
     frame_color = "#fabd2f" # {< replace_color(colors.brightyellow) >}
@@ -35,7 +34,7 @@
     sort = yes
 
     ### Text ###
-    font = FiraCode Nerd Font Mono 16
+    font = FiraCode Nerd Font Mono 16px
     line_height = 5
     markup = full
     format = "<b>%a: %s</b>\n\n%b"
@@ -57,11 +56,10 @@
     override_pause_level = 30
 
 [urgency_critical]
-    frame_width = 3
-    frame_color = "#fb4934" # {< replace_color(colors.brightred) >}
+    background = "#fb4934" # {< replace_color(colors.brightred) >}
+    foreground = "#282828" # {< replace_color(colors.bg) >}
     timeout = 0
     override_pause_level = 60
-    default_icon = dialog-warning
 
 [Media]
     appname = "Media Control"
