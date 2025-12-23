@@ -7,7 +7,6 @@
     offset = (22, 56)
     scale = 1
     notification_limit = 20
-    corner_radius = 12
     frame_width = 0
     separator_color = "auto"
 
@@ -23,12 +22,12 @@
 
     indicate_hidden = yes
 
-    padding = 10
-    horizontal_padding = 10
+    padding = 20
+    horizontal_padding = 20
     text_icon_padding = 10
 
-    background = "#282828" # {< replace_color(colors.bg) >}
-    foreground = "#fbf1c7" # {< replace_color(colors.fg) >}
+    background = "#3c3836" # {< replace_color(colors.bg1) >}
+    foreground = "#d5c4a1" # {< replace_color(colors.fg2) >}
     frame_color = "#fabd2f" # {< replace_color(colors.brightyellow) >}
 
     sort = yes
@@ -37,7 +36,8 @@
     font = FiraCode Nerd Font Mono 16px
     line_height = 5
     markup = full
-    format = "<b>%a: %s</b>\n\n%b"
+    # {# replace_re("background='#[0-9a-f]{6}' foreground='#[0-9a-f]{6}'> %a </span>\\\\n<span foreground='#[0-9a-f]{6}'", `background='${colors.brightyellow}' foreground='${colors.bg}'> %a </span>\n<span foreground='${colors.brightyellow}'`) #}
+    format = "<span weight='bold' background='#fabd2f' foreground='#282828'> %a </span>\n<span foreground='#fabd2f' weight='bold'>%s</span>\n%b"
 
     ### Icons ###
     enable_recursive_icon_lookup = true
@@ -60,13 +60,15 @@
     foreground = "#282828" # {< replace_color(colors.bg) >}
     timeout = 0
     override_pause_level = 60
+# {# replace_re("background='#[0-9a-f]{6}' foreground='#[0-9a-f]{6}'", `background='${colors.bg}' foreground='${colors.brightred}'`) #}
+    format = "<span weight='bold' background='#282828' foreground='#fb4934'> %a </span>\n<b>%s</b>\n%b"
 
 [Media]
     appname = "Media Control"
-    format = "%s"
+    format = "<b>%s</b>"
     alignment = center
 
 [Battery]
     appname = "Battery"
-    format = "%s"
+    format = "<b>%s</b>"
     alignment = center
