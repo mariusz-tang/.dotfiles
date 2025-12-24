@@ -3,94 +3,35 @@ configuration {
     monitor: "primary";
 }
 
-// {# replace_re("light|dark", theme_name) #}
-@import "colors/dark"
-@import "colors/common"
-
 * {
-    background-color:               var(background);
-    text-color:                     var(foreground);
+    background-color:               #3c3836; // {< replace_color(colors.bg1) >}
+    text-color:                     #d5c4a1; // {< replace_color(colors.fg2) >}
     spacing: 0;
 
-    overlay-color:                  var(gruvbox-bg0-hard-overlay);
-    prompt-mode-color:              var(gruvbox-green);
-    prompt-sep-color:               var(gruvbox-magenta);
-    element-prefix-color:           var(gruvbox-yellow-dark);
-
-    background:                     var(gruvbox-bg0);
-    foreground:                     var(gruvbox-fg1);
-    alternate-background:           var(gruvbox-bg0-soft);
-    alternate-foreground:           var(foreground);
-
-    active-background:              var(gruvbox-yellow-dark);
-    active-foreground:              var(background);
-    selected-active-background:     var(gruvbox-yellow-light);
-    selected-active-foreground:     var(active-foreground);
-
-    urgent-background:              var(gruvbox-red-dark);
-    urgent-foreground:              var(background);
-    alternate-urgent-background:    var(urgent-background);
-    alternate-urgent-foreground:    var(urgent-foreground);
-    selected-urgent-background:     var(gruvbox-red-light);
-    selected-urgent-foreground:     var(urgent-foreground);
+    prompt-mode-color:              #98971a; // {< replace_color(colors.green) >}
+    prompt-sep-color:               #b16286; // {< replace_color(colors.magenta) >}
+    element-prefix-color:           #d79921; // {< replace_color(colors.yellow) >}
 }
 
 window {
     width:              40ch;
-}
-
-mainbox {
-    background-color:   var(overlay-color);
+    padding: 0.5em 0 0.5em 0;
 }
 
 listview {
     spacing:        0;
     fixed-height:   false;
+    reverse: true;
 }
 
-element {
-    children:   [textbox-element-prefix, element-text];
-    padding:    0.5em;
-}
-textbox-element-prefix {
-    expand:             false;
-    str:                " 󰘍 ";
-    text-color:         var(element-prefix-color);
-    background-color:   inherit;
-}
 element-text {
-    background-color:   inherit;
-    text-color:         inherit;
+    padding: 0 0 0 0.5em;
+    highlight: #83a598; // {< replace_color(colors.brightblue) >}
 }
-
-element normal.normal {
-    background-color:   var(alternate-background);
-    text-color:         var(alternate-foreground);
-}
-element selected.normal {
-    background-color:   var(foreground);
-    text-color:         var(background);
-}
-element normal.active,
-element alternate.active {
-    background-color:   var(active-background);
-    text-color:         var(active-foreground);
-}
-element selected.active {
-    background-color:   var(selected-active-background);
-    text-color:         var(selected-active-foreground);
-}
-element normal.urgent {
-    background-color:   var(alternate-urgent-background);
-    text-color:         var(alternate-urgent-foreground);
-}
-element alternate.urgent {
-    background-color:   var(urgent-background);
-    text-color:         var(urgent-foreground);
-}
-element selected.urgent {
-    background-color:   var(selected-urgent-background);
-    text-color:         var(selected-urgent-foreground);
+element-text selected {
+    background-color: #504945; // {< replace_color(colors.bg2) >}
+    text-color: #458588; // {< replace_color(colors.blue) >}
+    text-transform: bold;
 }
 
 prompt {

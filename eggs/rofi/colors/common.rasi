@@ -1,8 +1,0 @@
-* {
-    gruvbox-red-dark:       #cc241d;
-    gruvbox-red-light:      #fb4934;
-    gruvbox-yellow-dark:    #d79921;
-    gruvbox-yellow-light:   #fabd2f;
-    gruvbox-magenta:        #b16286;
-    gruvbox-green:          #98971a;
-}

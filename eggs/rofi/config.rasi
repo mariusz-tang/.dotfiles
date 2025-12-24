@@ -4,24 +4,20 @@ configuration {
     terminal: "alacritty";
     sort: true;
     sorting-method: "fzf";
-    // Make these four characters long for alignment purposes.
-    display-window: "wind";
     display-run: " run";
-    display-ssh: " shh";
 }
 
 mainbox {
-    children: [input-box, listview];
+    children: [listview, input-box];
 }
 
 input-box {
     expand:         false;
     children:       [inputbar, message];
-    padding:        0.5em;
-    spacing:        0.5em;
 }
 
 inputbar {
+    padding: 0 0 0 0.5em;
     spacing:    0;
     children:   [prompt, textbox-prompt-sep, entry];
 }
