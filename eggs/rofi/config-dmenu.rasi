@@ -7,7 +7,7 @@ mainbox {
 message-bar {
     expand: false;
     orientation: horizontal;
-    children:   [prompt, textbox-prompt-sep, message];
+    children: [prompt, textbox-prompt-sep, message];
     padding: 0 0 0 0.5em;
 }
 message {

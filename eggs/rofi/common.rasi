@@ -4,23 +4,23 @@ configuration {
 }
 
 * {
-    background-color:               #3c3836; // {< replace_color(colors.bg1) >}
-    text-color:                     #d5c4a1; // {< replace_color(colors.fg2) >}
+    background-color: #3c3836; // {< replace_color(colors.bg1) >}
+    text-color: #d5c4a1; // {< replace_color(colors.fg2) >}
     spacing: 0;
 
-    prompt-mode-color:              #98971a; // {< replace_color(colors.green) >}
-    prompt-sep-color:               #b16286; // {< replace_color(colors.magenta) >}
-    element-prefix-color:           #d79921; // {< replace_color(colors.yellow) >}
+    prompt-mode-color: #98971a; // {< replace_color(colors.green) >}
+    prompt-sep-color: #b16286; // {< replace_color(colors.magenta) >}
+    element-prefix-color: #d79921; // {< replace_color(colors.yellow) >}
 }
 
 window {
-    width:              40ch;
+    width: 40ch;
     padding: 0.5em 0 0.5em 0;
 }
 
 listview {
-    spacing:        0;
-    fixed-height:   false;
+    spacing: 0;
+    fixed-height: false;
     reverse: true;
 }
 
@@ -38,7 +38,7 @@ prompt {
     text-color: var(prompt-mode-color);
 }
 textbox-prompt-sep {
-    expand:     false;
-    str:        " ❯ ";
+    expand: false;
+    str: " ❯ ";
     text-color: var(prompt-sep-color);
 }

@@ -12,21 +12,21 @@ mainbox {
 }
 
 input-box {
-    expand:         false;
-    children:       [inputbar, message];
+    expand: false;
+    children: [inputbar, message];
 }
 
 inputbar {
     padding: 0 0 0 0.5em;
-    spacing:    0;
-    children:   [prompt, textbox-prompt-sep, entry];
+    spacing: 0;
+    children: [prompt, textbox-prompt-sep, entry];
 }
 entry {
-    cursor-width:   1ch;
-    blink:          false;
+    cursor-width: 1ch;
+    blink: false;
 }
 
 listview {
     fixed-height: true;
-    lines:          6;
+    lines: 6;
 }
