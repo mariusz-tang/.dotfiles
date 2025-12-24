@@ -15,7 +15,11 @@ configuration {
 
 window {
     width: 40ch;
-    padding: 0.5em 0 0.5em 0;
+    anchor: south;
+    location: south;
+    // Extra bottom padding and y-offset to hide rounded corners.
+    padding: 0.5em 0 1em 0;
+    y-offset: 0.5em;
 }
 
 listview {
