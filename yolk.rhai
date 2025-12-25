@@ -36,6 +36,11 @@ export let eggs = #{
         main_file: "config",
         targets: "~/.config/i3",
     },
+    millennium: #{
+        strategy: "merge",
+        targets: "~/.config/millennium",
+        templates: ["quickcss.css"],
+    },
     nvim: #{
         main_file: "lua",
         targets: "~/.config/nvim",
