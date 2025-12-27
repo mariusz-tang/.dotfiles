@@ -8,8 +8,9 @@ vim.opt.colorcolumn = "80,120"
 -- Relative line numbers.
 vim.opt.relativenumber = true
 
--- Keep context lines around the cursor.
+-- Keep context lines/columns around the cursor.
 vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 40
 
 -- mini.basic changes this to stop `~` being shown past the end of the buffer.
 -- We are reverting that change.
