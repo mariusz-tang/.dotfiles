@@ -7,6 +7,8 @@ return {
       return {
         clues = {
           { mode = "n", keys = "<Leader>b", desc = "+Black hole" },
+          { mode = "n", keys = "<Leader>d", desc = "+Debugger" },
+          { mode = "n", keys = "<Leader>dj", desc = "+Jump to window" },
           { mode = "n", keys = "<Leader>t", desc = "+Treesitter" },
           { mode = "n", keys = "<Leader>s", desc = "+Search" },
           { mode = "n", keys = "<Leader>l", desc = "+LSP" },

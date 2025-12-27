@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = { "LiadOz/nvim-dap-repl-highlights", opts = {} },
     lazy = false,
     branch = "main",
     build = ":TSUpdate",
@@ -21,6 +22,8 @@ return {
         -- Markdown
         "markdown",
         "markdown_inline",
+        -- Debugger REPL
+        "dap_repl",
         -- Other
         "editorconfig",
         "tmux",
@@ -41,6 +44,9 @@ return {
           local excluded = {
             "checkhealth",
             "csv",
+            "dap-view",
+            "dap-view-term",
+            "dap-repl", -- The dap repl highlight plugin will enable highlights automatically.
             "lazy",
             "lazy_backdrop",
             "minifiles",
