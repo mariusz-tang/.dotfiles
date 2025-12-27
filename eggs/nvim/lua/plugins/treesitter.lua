@@ -39,6 +39,7 @@ return {
           local filetype = event.match
 
           local excluded = {
+            "checkhealth",
             "csv",
             "lazy",
             "lazy_backdrop",
