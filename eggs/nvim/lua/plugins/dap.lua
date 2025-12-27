@@ -36,12 +36,11 @@ return {
         terminal = { position = "right" },
       },
     },
-  },
-  {
-    "mfussenegger/nvim-dap",
-    config = function()
+    config = function(_, opts)
       local dap = require("dap")
       local dap_view = require("dap-view")
+
+      dap_view.setup(opts)
 
       local function terminate_session()
         dap.terminate()
@@ -91,6 +90,10 @@ return {
       set_dap_jump_keymap("e", "Exceptions")
       set_dap_jump_keymap("w", "Watches")
     end,
+  },
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = { "igorlfs/nvim-dap-view" },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
