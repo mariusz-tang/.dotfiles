@@ -16,6 +16,7 @@ data = data or require("config.default-settings")
 data.lsps = data.lsps or {}
 data.linters = data.linters or {}
 data.formatters = data.formatters or {}
+data.dap_handlers = data.dap_handlers or {}
 
 local ensure_installed = {}
 

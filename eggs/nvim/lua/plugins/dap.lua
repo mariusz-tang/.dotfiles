@@ -101,7 +101,7 @@ return {
       "williamboman/mason.nvim",
       "mfussenegger/nvim-dap",
     },
-    opts = { handlers = {} },
+    opts = { handlers = ProjectSettings.dap_handlers },
   },
   {
     "theHamsta/nvim-dap-virtual-text",
