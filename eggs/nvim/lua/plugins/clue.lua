@@ -6,6 +6,7 @@ return {
       local gen_clues = require("mini.clue").gen_clues
       return {
         clues = {
+          { mode = "n", keys = "<Leader>b", desc = "+Black hole" },
           { mode = "n", keys = "<Leader>t", desc = "+Treesitter" },
           { mode = "n", keys = "<Leader>s", desc = "+Search" },
           { mode = "n", keys = "<Leader>l", desc = "+LSP" },
