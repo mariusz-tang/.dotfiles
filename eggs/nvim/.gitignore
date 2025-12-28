@@ -1,2 +1,3 @@
-/lua/projects/
 /lazy-lock.json
+/lua/project-settings/custom
+/lua/project-settings/map.lua

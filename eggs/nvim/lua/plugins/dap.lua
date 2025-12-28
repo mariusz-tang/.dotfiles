@@ -96,14 +96,6 @@ return {
     dependencies = { "igorlfs/nvim-dap-view" },
   },
   {
-    "jay-babu/mason-nvim-dap.nvim",
-    dependencies = {
-      "williamboman/mason.nvim",
-      "mfussenegger/nvim-dap",
-    },
-    opts = { handlers = ProjectSettings.dap_handlers },
-  },
-  {
     "theHamsta/nvim-dap-virtual-text",
     opts = { highlight_new_as_changed = true },
   },
