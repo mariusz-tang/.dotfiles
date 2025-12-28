@@ -7,7 +7,7 @@
   --kuro-black1: #3c3836; /* {< replace_color(base_colors.black1) >} */
   --kuro-black0: #282828; /* {< replace_color(base_colors.black0) >} */
   --kuro-black_h: #1d2021; /* {< replace_color(base_colors.black_h) >} */
-  
+
   --kuro-bg1: var(--kuro-white1);
   --kuro-bg: var(--kuro-white0);
   --kuro-bg_h: var(--kuro-white_h);
@@ -28,15 +28,15 @@
 :root {
   font-family: "FiraCode Nerd Font Mono" !important;
   font-weight: 500 !important;
-  
+
   --zen-primary-color: var(--kuro-bg) !important;
   --zen-background-opacity: 1 !important;
   --zen-grainy-background-opacity: 0.1 !important;
   --zen-main-browser-background: var(--kuro-bg) !important;
   --zen-main-browser-background-old: var(--kuro-bg) !important; /* dark1 */
-  
+
   --toolbox-textcolor: var(--kuro-fg) !important;
-  
+
   --toolbarbutton-icon-fill: var(--kuro-gray) !important;
   --toolbar-color: var(--kuro-fg) !important;
 }
@@ -47,7 +47,7 @@
 
 .urlbarView-row:not([selected]) {
   color: var(--kuro-fg) !important;
-  
+
   .urlbarView-url {
     color: var(--kuro-gray) !important;
   }
@@ -55,15 +55,16 @@
 
 .urlbarView-row[selected] {
   background-color: var(--kuro-fg) !important;
-  
-  *, .urlbarView-title-separator:before {
+
+  *,
+  .urlbarView-title-separator:before {
     color: var(--kuro-bg) !important;
   }
-  
+
   .urlbarView-favicon {
     background-color: var(--kuro-bg) !important;
   }
-  
+
   .urlbarView-title {
     font-weight: bold !important;
   }
@@ -82,8 +83,11 @@
 }
 
 /* Empty tab window color. */
-:root:not([inDOMFullscreen="true"]):not([chromehidden~="location"]):not([chromehidden~="toolbar"]) {
-  & #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer, & #tabbrowser-tabpanels[dragging-split="true"] {
+:root:not([inDOMFullscreen="true"]):not([chromehidden~="location"]):not(
+    [chromehidden~="toolbar"]
+  ) {
+  & #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer,
+  & #tabbrowser-tabpanels[dragging-split="true"] {
     &.browserSidebarContainer {
       & browser[transparent="true"] {
         background: light-dark(var(--kuro-bg_h), var(--kuro-bg1)) !important;

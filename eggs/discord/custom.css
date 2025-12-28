@@ -2,97 +2,106 @@
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css);
 
 :root {
-    --settingsicons:            1;
-    --font:                     "gg sans", "Noto Sans";
+  --settingsicons: 1;
+  --font: "gg sans", "Noto Sans";
 
-    --accentcolor:              131,165,152; /* {< replace_rgb(colors.brightblue) >} */
-    --accentcolor2:             211,134,155; /* {< replace_rgb(colors.brightmagenta) >} */
-    --linkcolor:                142,192,124; /* {< replace_rgb(colors.brightcyan) >} */
-    --mentioncolor:             211,134,155; /* {< replace_rgb(colors.brightmagenta) >} */
-    --successcolor:             184,187,38; /* {< replace_rgb(colors.brightgreen) >} */
-    --warningcolor:             254,128,25; /* {< replace_rgb(colors.brightorange) >} */
-    --dangercolor:              251,73,52; /* {< replace_rgb(colors.brightred) >} */
+  --accentcolor: 131, 165, 152; /* {< replace_rgb(colors.brightblue) >} */
+  --accentcolor2: 211, 134, 155; /* {< replace_rgb(colors.brightmagenta) >} */
+  --linkcolor: 142, 192, 124; /* {< replace_rgb(colors.brightcyan) >} */
+  --mentioncolor: 211, 134, 155; /* {< replace_rgb(colors.brightmagenta) >} */
+  --successcolor: 184, 187, 38; /* {< replace_rgb(colors.brightgreen) >} */
+  --warningcolor: 254, 128, 25; /* {< replace_rgb(colors.brightorange) >} */
+  --dangercolor: 251, 73, 52; /* {< replace_rgb(colors.brightred) >} */
 
-    --framecolor:               124,111,100,0.121; /* {< replace_rgb(colors.bg4) >} */
+  --framecolor: 124, 111, 100, 0.121; /* {< replace_rgb(colors.bg4) >} */
 
-    --textbrightest:            251,241,199; /* {< replace_rgb(colors.fg0) >} */
-    --textbrighter:             235,219,178; /* {< replace_rgb(colors.fg1) >} */
-    --textbright:               213,196,161; /* {< replace_rgb(colors.fg2) >} */
-    --textdark:                 189,174,147; /* {< replace_rgb(colors.fg3) >} */
-    --textdarker:               168,153,132; /* {< replace_rgb(colors.fg4) >} */
-    --textdarkest:              168,153,132; /* {< replace_rgb(colors.brightgray) >} */
+  --textbrightest: 251, 241, 199; /* {< replace_rgb(colors.fg0) >} */
+  --textbrighter: 235, 219, 178; /* {< replace_rgb(colors.fg1) >} */
+  --textbright: 213, 196, 161; /* {< replace_rgb(colors.fg2) >} */
+  --textdark: 189, 174, 147; /* {< replace_rgb(colors.fg3) >} */
+  --textdarker: 168, 153, 132; /* {< replace_rgb(colors.fg4) >} */
+  --textdarkest: 168, 153, 132; /* {< replace_rgb(colors.brightgray) >} */
 
-    --backgroundcode:           40,40,40; /* {< replace_rgb(colors.bg0) >} */
-    --backgroundaccent:         146,131,116; /* {< replace_rgb(colors.gray) >} */
-    --backgroundprimary:        80,73,69; /* {< replace_rgb(colors.bg2) >} */
-    --backgroundsecondary:      60,56,54; /* {< replace_rgb(colors.bg1) >} */
-    --backgroundsecondaryalt:   60,56,54; /* {< replace_rgb(colors.bg1) >} */
-    --backgroundtertiary:       40,40,40; /* {< replace_rgb(colors.bg0) >} */
-    --backgroundfloating:       80,73,69; /* {< replace_rgb(colors.bg2) >} */
+  --backgroundcode: 40, 40, 40; /* {< replace_rgb(colors.bg0) >} */
+  --backgroundaccent: 146, 131, 116; /* {< replace_rgb(colors.gray) >} */
+  --backgroundprimary: 80, 73, 69; /* {< replace_rgb(colors.bg2) >} */
+  --backgroundsecondary: 60, 56, 54; /* {< replace_rgb(colors.bg1) >} */
+  --backgroundsecondaryalt: 60, 56, 54; /* {< replace_rgb(colors.bg1) >} */
+  --backgroundtertiary: 40, 40, 40; /* {< replace_rgb(colors.bg0) >} */
+  --backgroundfloating: 80, 73, 69; /* {< replace_rgb(colors.bg2) >} */
 }
 
 .theme-light:not(.custom-user-profile-theme),
 .theme-dark:not(.custom-user-profile-theme) {
-    --message-mentioned-background-default: rgba(var(--mentioncolor, --warningcolor_v), .2);
+  --message-mentioned-background-default: rgba(
+    var(--mentioncolor, --warningcolor_v),
+    0.2
+  );
 
-    /* Buttons. */
-    --control-secondary-text-default: rgba(var(--textbrighter));
-    --control-secondary-background-default: rgba(var(--backgroundsecondary));
-    --control-secondary-border-default: rgba(var(--backgroundprimary));
+  /* Buttons. */
+  --control-secondary-text-default: rgba(var(--textbrighter));
+  --control-secondary-background-default: rgba(var(--backgroundsecondary));
+  --control-secondary-border-default: rgba(var(--backgroundprimary));
 
-    --control-secondary-text-hover: rgba(var(--textbrightest));
-    --control-secondary-background-hover: rgba(var(--backgroundprimary));
-    --control-secondary-border-hover: rgba(var(--backgroundsecondary));
+  --control-secondary-text-hover: rgba(var(--textbrightest));
+  --control-secondary-background-hover: rgba(var(--backgroundprimary));
+  --control-secondary-border-hover: rgba(var(--backgroundsecondary));
 
-    --control-secondary-text-active: rgba(var(--backgroundtertiary));
-    --control-secondary-background-active: rgba(var(--textbright));
-    --control-secondary-border-active: rgba(var(--backgroundprimary));
+  --control-secondary-text-active: rgba(var(--backgroundtertiary));
+  --control-secondary-background-active: rgba(var(--textbright));
+  --control-secondary-border-active: rgba(var(--backgroundprimary));
 
-    /* Icon buttons and search results. */
-    --icon-strong: rgba(var(--textbrightest));
-    --icon-subtle: rgba(var(--textdark));
-    --interactive-icon-default: rgba(var(--textdark));
-    --interactive-text-default: rgba(var(--textdark));
-    --interactive-text-hover: rgba(var(--textbrightest));
-    --interactive-text-active: rgba(var(--textbrightest));
+  /* Icon buttons and search results. */
+  --icon-strong: rgba(var(--textbrightest));
+  --icon-subtle: rgba(var(--textdark));
+  --interactive-icon-default: rgba(var(--textdark));
+  --interactive-text-default: rgba(var(--textdark));
+  --interactive-text-hover: rgba(var(--textbrightest));
+  --interactive-text-active: rgba(var(--textbrightest));
 
-    /* Search bar. */
-    --input-placeholder-text-default: rgba(var(--textdarkest));
+  /* Search bar. */
+  --input-placeholder-text-default: rgba(var(--textdarkest));
 
-    /* User profiles. */
-    --user-profile-overlay-background: rgba(var(--backgroundsecondary));
+  /* User profiles. */
+  --user-profile-overlay-background: rgba(var(--backgroundsecondary));
 
-    /* "Connected" text color */
-    --text-feedback-positive: rgba(var(--successcolor));
+  /* "Connected" text color */
+  --text-feedback-positive: rgba(var(--successcolor));
 }
 
 /* Top-left Discord logo. */
-._6e9f8dce4cc18de3-wrapper._6e9f8dce4cc18de3-selected ._6e9f8dce4cc18de3-childWrapper, ._6e9f8dce4cc18de3-wrapper:hover ._6e9f8dce4cc18de3-childWrapper {
-    color: rgba(var(--backgroundtertiary));
+._6e9f8dce4cc18de3-wrapper._6e9f8dce4cc18de3-selected
+  ._6e9f8dce4cc18de3-childWrapper,
+._6e9f8dce4cc18de3-wrapper:hover ._6e9f8dce4cc18de3-childWrapper {
+  color: rgba(var(--backgroundtertiary));
 }
 
 /* Reactions counter. */
-#app-mount .a2c9e80f6531ccc2-pill.a2c9e80f6531ccc2-selected > div, #app-mount ._23977d5b7cef7361-reaction._23977d5b7cef7361-reactionMe ._23977d5b7cef7361-reactionCount {
-    color: rgba(var(--textbrightest));
+#app-mount .a2c9e80f6531ccc2-pill.a2c9e80f6531ccc2-selected > div,
+#app-mount
+  ._23977d5b7cef7361-reaction._23977d5b7cef7361-reactionMe
+  ._23977d5b7cef7361-reactionCount {
+  color: rgba(var(--textbrightest));
 }
 
 /* Status bubbles. */
 .ab86098b36386ff7-container {
-    --custom-status-bubble-background: rgba(var(--backgroundtertiary));
-    --custom-status-bubble-background-color: rgba(var(--backgroundtertiary));
+  --custom-status-bubble-background: rgba(var(--backgroundtertiary));
+  --custom-status-bubble-background-color: rgba(var(--backgroundtertiary));
 }
 
 /* "Active Now" panels. */
 #app-mount .bf1984a18b3ec6f0-outer.bf1984a18b3ec6f0-interactive {
-    background-color: rgba(var(--backgroundprimary));
+  background-color: rgba(var(--backgroundprimary));
 }
 #app-mount .bf1984a18b3ec6f0-outer.bf1984a18b3ec6f0-interactive:hover {
-    background-color: rgba(var(--backgroundsecondary));
+  background-color: rgba(var(--backgroundsecondary));
 }
 
 /* Mentions. */
-.mention, #app-mount .f61d60ed65f9a128-wrapper {
-    color: rgba(var(--textbrightest));
+.mention,
+#app-mount .f61d60ed65f9a128-wrapper {
+  color: rgba(var(--textbrightest));
 }
 
 /*
@@ -101,14 +110,14 @@
 * catches both methods that I have noticed.
 */
 rect[fill="#43a25a"] {
-    fill: #b8bb26; /* {< replace_color(colors.brightgreen) >} */
+  fill: #b8bb26; /* {< replace_color(colors.brightgreen) >} */
 }
 rect[fill="#82838b"] {
-    fill: #a89984; /* {< replace_color(colors.brightgray) >} */
+  fill: #a89984; /* {< replace_color(colors.brightgray) >} */
 }
 rect[fill="#d83a42"] {
-    fill: #fb4934; /* {< replace_color(colors.brightred) >} */
+  fill: #fb4934; /* {< replace_color(colors.brightred) >} */
 }
 rect[fill="#ca9654"] {
-    fill: #fabd2f; /* {< replace_color(colors.brightyellow) >} */
+  fill: #fabd2f; /* {< replace_color(colors.brightyellow) >} */
 }
