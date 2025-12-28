@@ -1,9 +1,13 @@
 -- Load the correct project settings module.
 local settings_module = "project-settings.default"
-local has_project_map, project_map = pcall(require, "project-settings.map")
-if has_project_map then
-  local cwd = vim.uv.cwd()
-  settings_module = project_map[cwd] or settings_module
+local cwd = vim.uv.cwd() or ""
+if string.match(cwd, "^" .. vim.env.HOME .. "/.config/yolk") then
+  settings_module = "project-settings.dotfiles"
+else
+  local has_project_map, project_map = pcall(require, "project-settings.map")
+  if has_project_map then
+    settings_module = project_map[cwd] or settings_module
+  end
 end
 local settings = require(settings_module)
 
