@@ -8,6 +8,7 @@ return {
   formatters = {
     css = { "prettier" },
     lua = { "stylua" },
+    python = { "isort", "black" },
     toml = { "taplo" },
     zsh = { "beautysh" },
   },
