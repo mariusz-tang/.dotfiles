@@ -1,4 +1,4 @@
-#! /usr/bin/zsh
+#!/usr/bin/zsh
 
 # This opens rofi in dmenu mode, with one option per argument.
 # Each argument should contain a single pair of brackets containing one

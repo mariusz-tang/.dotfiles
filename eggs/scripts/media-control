@@ -1,4 +1,4 @@
-#! /usr/bin/zsh
+#!/usr/bin/zsh
 
 app_name="Media Control"
 

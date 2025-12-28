@@ -1,4 +1,4 @@
-#! /usr/bin/zsh
+#!/usr/bin/zsh
 
 terminal='[t]erminal'
 browser='[b]rowser'
