@@ -7,6 +7,7 @@ return {
   },
   formatters = {
     lua = { "stylua" },
+    toml = { "taplo" },
     zsh = { "beautysh" },
     css = { "prettier" },
   },
