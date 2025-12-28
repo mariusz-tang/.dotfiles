@@ -2,13 +2,13 @@
 return {
   lsps = {
     bashls = {},
-    lua_ls = {},
     cssls = {},
+    lua_ls = {},
   },
   formatters = {
+    css = { "prettier" },
     lua = { "stylua" },
     toml = { "taplo" },
     zsh = { "beautysh" },
-    css = { "prettier" },
   },
 }
