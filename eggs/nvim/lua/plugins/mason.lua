@@ -19,7 +19,7 @@ return {
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
-    dependencies = { "williamboman/mason.nvim" },
+    dependencies = { "mason-org/mason.nvim" },
     opts = {
       handlers = ProjectSettings.dap_handlers,
       ensure_installed = ProjectSettings.ensure_installed_daps,
