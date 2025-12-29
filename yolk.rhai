@@ -27,7 +27,10 @@ export let eggs = #{
         targets: "~/.config/dunst",
         templates: ["dunstrc"],
     },
-    git: "~/.config/git",
+    git: #{
+        main_file: "config",
+        targets: "~/.config/git",
+    },
     gnupg: #{
         strategy: "merge",
         targets: "~/.gnupg",
