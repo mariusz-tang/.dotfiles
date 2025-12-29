@@ -121,11 +121,9 @@ export let eggs = #{
 
 fn replace_rgb(color) {
     // Replaces an rgb color of the form rrr,ggg,bbb.
-    let color_str = utils::color_hex_to_rgb_str(color);
-    color_str.remove("rgb(");
-    color_str.remove(" ");
-    color_str.remove(")");
-    let result = template::replace_re(`(\d{1,3},){2}\d{1,3}`, color_str);
+    let color_rgb = utils::color_hex_to_rgb(color);
+    let color_str = `${color_rgb["r"]}, ${color_rgb["g"]}, ${color_rgb["b"]}`;
+    let result = template::replace_re(`(\d{1,3}, ){2}\d{1,3}`, color_str);
     return result;
 }
 
