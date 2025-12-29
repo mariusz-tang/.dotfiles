@@ -40,8 +40,8 @@ gaps inner 11
 popup_during_fullscreen leave_fullscreen
 focus_on_window_activation focus
 
-# Theme-switching
-exec --no-startup-id darkman run
+# Configure display setup
+exec --no-startup-id display-config
 
 # SSH agent. Key lifetime is 30 minutes.
 exec --no-startup-id ssh-agent -D -a ${SSH_AUTH_SOCK} -t 30m
@@ -54,9 +54,6 @@ exec --no-startup-id dunst -startup_notification
 
 # Battery state notifications
 exec --no-startup-id ~/.config/i3/scripts/monitor-battery
-
-# Bar
-exec --no-startup-id start-polybar
 
 # Startup apps
 exec --no-startup-id discord

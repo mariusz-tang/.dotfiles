@@ -1,0 +1,6 @@
+#!/usr/bin/zsh
+
+autorandr --change
+sleep 2  # Wait for xrandr changes.
+start-polybar
+~/.fehbg
