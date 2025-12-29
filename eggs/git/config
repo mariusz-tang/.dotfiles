@@ -10,6 +10,7 @@
 	autocrlf = input
 	compression = 9  # improve network transfer time
 	editor = nvim
+	pager = delta
 	whitespace = error
 
 # Operations
@@ -21,11 +22,13 @@
 [init]
 	defaultBranch = main
 [interactive]
-	diffFilter = diff-so-fancy --patch
+	diffFilter = delta --color-only
 	singlekey = true
 [log]
 	abbrevCommit = true  # short commits
 	graphColors = blue,yellow,cyan,magenta,green,red
+[merge]
+	conflictStyle = zdiff3
 [pull]
 	default = current
 	rebase = true
@@ -50,20 +53,12 @@
 	detachedHead = false
 
 # Colors
-[color "blame"]
-	highlightRecent = normal bold dim,1 year ago,white,1 month ago,default,7 days ago,blue
 [color "branch"]
-	current  = magenta
-	local    = default
-	remote   = yellow
+	current = magenta
+	local = default
+	remote = yellow
 	upstream = green
-	plain    = blue
-[color "diff"]
-	meta       = normal bold dim
-	frag       = magenta
-	context    = white
-	whitespace = yellow reverse
-	old        = red
+	plain = blue
 [color.decorate]
 	HEAD = red
 	branch = blue
@@ -76,15 +71,32 @@
 	interHunkContext = 10  # merge near hunks in diffs
 	renames = copies  # detect copies as renames in diffs
 	tool = nvimdiff
-[diff-so-fancy]
-	markEmptyLines = false
 [difftool "nvimdiff"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
+# Pager
 [pager]
 	branch = false  # no need to use pager for git branch
-	diff = diff-so-fancy | less --tabs=4 -RF  # diff-so-fancy as diff pager
 	tag = false
+[delta]
+# {# replace_re("#[0-9a-f]{6}( #[0-9a-f]{6}){3}", `${colors.bg0} ${colors.bg1} ${colors.bg2} ${colors.bg3}`) #}
+	blame-palette = "#282828 #3c3836 #504945 #665c54"
+	features = line-numbers decorations
+	navigate = true
+	syntax-theme = gruvbox-dark  # {< replace_re("dark|light", theme_name) >}
+	tabs = 4
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+	hunk-header-decoration-style = cyan box ul
+[delta "line-numbers"]
+	line-numbers-left-style = cyan
+	line-numbers-right-style = cyan
+	line-numbers-minus-style = 124
+	line-numbers-plus-style = 28
+	line-numbers-zero-style = gray
+
 
 # Url aliases
 [url "git@github.com:"]

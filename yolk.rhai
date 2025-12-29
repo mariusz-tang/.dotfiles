@@ -30,6 +30,7 @@ export let eggs = #{
     git: #{
         main_file: "config",
         targets: "~/.config/git",
+        templates: ["config"],
     },
     gnupg: #{
         strategy: "merge",
