@@ -17,9 +17,14 @@ return {
     config = function(_, opts)
       require("mini.files").setup(opts)
       vim.keymap.set("n", "<leader>e", function()
-        MiniFiles.open(vim.api.nvim_buf_get_name(0))
+        local buffer_name = vim.api.nvim_buf_get_name(0)
+        -- This will fail if the current buffer does not represent a file.
+        local succeeded = pcall(MiniFiles.open, buffer_name)
+        if not succeeded then
+          -- Open the current working directory instead.
+          MiniFiles.open()
+        end
       end, { desc = "File explorer" })
-      vim.keymap.set("n", "<leader>E", MiniFiles.open, { desc = "File explorer (current working directory)" })
     end,
   },
 }
