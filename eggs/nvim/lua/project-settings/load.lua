@@ -19,6 +19,7 @@ settings.notification_text = notification_text
 -- Insert missing tables.
 settings.lsps = settings.lsps or {}
 settings.linters = settings.linters or {}
+settings.lsp_format = settings.lsp_format or "never"
 settings.formatters = settings.formatters or {}
 settings.dap_handlers = settings.dap_handlers or {}
 
