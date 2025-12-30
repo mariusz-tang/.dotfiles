@@ -83,6 +83,7 @@
 	blame-palette = "#282828 #3c3836 #504945 #665c54"
 	features = line-numbers decorations
 	navigate = true
+	side-by-side = true
 	syntax-theme = gruvbox-dark  # {< replace_re("dark|light", theme_name) >}
 	tabs = 4
 [delta "decorations"]
