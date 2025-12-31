@@ -81,7 +81,7 @@
 #app-mount
   ._23977d5b7cef7361-reaction._23977d5b7cef7361-reactionMe
   ._23977d5b7cef7361-reactionCount {
-  color: rgba(var(--textbrightest));
+  color: rgba(var(--textbrightest)) !important;
 }
 
 /* Status bubbles. */
