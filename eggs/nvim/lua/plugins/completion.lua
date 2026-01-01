@@ -9,11 +9,16 @@ return {
     "nvim-mini/mini.snippets",
     version = false,
     dependencies = "rafamadriz/friendly-snippets",
-    opts = function()
-      return { snippets = { require("mini.snippets").gen_loader.from_lang() } }
-    end,
-    config = function(_, opts)
-      require("mini.snippets").setup(opts)
+    config = function()
+      local snippets = require("mini.snippets")
+      snippets.setup({
+        snippets = {
+          snippets.gen_loader.from_lang({
+            -- C# files are recognized as c_sharp instead of csharp.
+            lang_patterns = { c_sharp = { "/**/csharp/*.json" } },
+          }),
+        },
+      })
       MiniSnippets.start_lsp_server()
     end,
   },
