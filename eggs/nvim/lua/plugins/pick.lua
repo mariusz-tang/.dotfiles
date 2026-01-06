@@ -20,7 +20,7 @@ return {
 
       local builtin = MiniPick.builtin
       local function search_all_files()
-        builtin.cli({ command = { "rg", "--no-ignore", "--hidden", "--files" } })
+        builtin.cli({ command = { "rg", "--files", "-uuu", "--no-config" } })
       end
       set_search_keybind("b", builtin.buffers, "Buffers")
       set_search_keybind("f", builtin.files, "Files")

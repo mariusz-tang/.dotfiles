@@ -5,6 +5,7 @@ mkdir --parents $bin_path
 export PATH="${bin_path}:${pipx_bin_path}:${npm_globals_path}:${PATH}"
 export EDITOR=nvim
 export GPG_TTY=$(tty)
+export RIPGREP_CONFIG_PATH=~/.config/ripgrep/config
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 # Colorize man

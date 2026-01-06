@@ -95,6 +95,10 @@ alias gsh='git show'
 alias gsw='git switch'
 alias gu='git pull'
 
+# ripgrep
+alias rgf='rg --files'
+alias rgaf='rg --files -uuu --no-config'
+
 # Yolk
 alias yolk="yolk "
 alias yo="yolk "

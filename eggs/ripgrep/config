@@ -1,0 +1,7 @@
+--hidden
+--smart-case
+
+--glob=!.git
+--glob=!.yolk_git
+--glob=!.deployed_cache
+--glob=!**/*.meta

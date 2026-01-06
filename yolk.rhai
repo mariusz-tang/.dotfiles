@@ -66,6 +66,7 @@ export let eggs = #{
         },
         templates: ["config.ini"],
     },
+    ripgrep: "~/.config/ripgrep",
     rofi: #{
         main_file: "scripts",
         strategy: "merge",
