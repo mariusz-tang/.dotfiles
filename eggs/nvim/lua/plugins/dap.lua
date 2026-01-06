@@ -82,6 +82,8 @@ return {
       set_dap_keymap("w", dap_view.add_expr, "Watch expression under cursor")
       set_dap_keymap("W", watch_expression_interactive, "Watch expression (interactive)")
       set_dap_keymap("b", dap.toggle_breakpoint, "Toggle breakpoint")
+      set_dap_keymap("c", dap.run_to_cursor, "Run to cursor")
+      set_dap_keymap("g", dap.goto_, "Jump to cursor")
       set_dap_keymap("l", set_log_point, "Set logpoint")
       set_dap_jump_keymap("r", "Repl")
       set_dap_jump_keymap("s", "Scopes")
