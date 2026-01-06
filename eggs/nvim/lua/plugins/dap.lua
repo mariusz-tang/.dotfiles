@@ -40,6 +40,7 @@ return {
       local dap = require("dap")
       local dap_view = require("dap-view")
 
+      dap.defaults.fallback.switchbuf = "usevisible,usetab,newtab"
       dap_view.setup(opts)
 
       local function terminate_session()
