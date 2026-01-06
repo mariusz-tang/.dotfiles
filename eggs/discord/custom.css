@@ -109,15 +109,19 @@
 * There are at least two ways that these indicators are generated, and this
 * catches both methods that I have noticed.
 */
+rect[fill="#45a366"],
 rect[fill="#43a25a"] {
   fill: #b8bb26; /* {< replace_color(colors.brightgreen) >} */
 }
+rect[fill="#84858d"],
 rect[fill="#82838b"] {
   fill: #a89984; /* {< replace_color(colors.brightgray) >} */
 }
+rect[fill="#da3e44"],
 rect[fill="#d83a42"] {
   fill: #fb4934; /* {< replace_color(colors.brightred) >} */
 }
+rect[fill="#ffc04e"],
 rect[fill="#ca9654"] {
   fill: #fabd2f; /* {< replace_color(colors.brightyellow) >} */
 }
