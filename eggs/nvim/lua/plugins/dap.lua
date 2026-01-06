@@ -45,6 +45,7 @@ return {
       local function terminate_session()
         dap.terminate()
         dap_view.close(true)
+        vim.cmd(":DapVirtualTextForceRefresh")
       end
 
       local function toggle_dap_view()
