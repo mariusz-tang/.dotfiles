@@ -99,7 +99,7 @@ alias gu='git pull'
 alias rgf='rg --files'
 alias rgaf='rg --files -uuu --no-config'
 
-# Yolk
+# yolk
 alias yolk="yolk "
 alias yo="yolk "
 alias ye="ls ~/.config/yolk/eggs/ | sed 's+/++' | fzf --prompt='Edit egg: ' --tmux | xargs yolk edit"
