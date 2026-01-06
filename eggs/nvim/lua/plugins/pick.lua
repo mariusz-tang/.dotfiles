@@ -19,20 +19,22 @@ return {
       end
 
       local builtin = MiniPick.builtin
+      local function search_all_files()
+        builtin.cli({ command = { "rg", "--no-ignore", "--hidden", "--files" } })
+      end
       set_search_keybind("b", builtin.buffers, "Buffers")
       set_search_keybind("f", builtin.files, "Files")
-      set_search_keybind("F", function()
-        builtin.cli({ command = { "rg", "--no-ignore", "--hidden", "--files" } })
-      end, "All files")
+      set_search_keybind("F", search_all_files, "All files")
       set_search_keybind("g", builtin.grep_live, "Live grep")
       set_search_keybind("G", builtin.grep, "Static grep")
       set_search_keybind("h", builtin.help, "Help")
       set_search_keybind("r", builtin.resume, "Resume latest picker")
 
       local extra = MiniExtra.pickers
-      set_search_keybind("<leader>", function()
+      local function search_current_buffer()
         extra.buf_lines({ scope = "current", preserve_order = true })
-      end, "Current buffer")
+      end
+      set_search_keybind("<leader>", search_current_buffer, "Current buffer")
       set_search_keybind("C", extra.commands, "Commands")
       set_search_keybind("d", extra.diagnostic, "Diagnostics")
       set_search_keybind("c", extra.git_commits, "Commits")
