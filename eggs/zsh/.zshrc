@@ -24,6 +24,12 @@ eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
 # Keybinds
 bindkey -e
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
+bindkey ' ' magic-space
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
