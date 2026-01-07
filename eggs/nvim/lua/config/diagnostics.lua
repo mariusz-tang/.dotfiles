@@ -17,4 +17,5 @@ local function toggle_virtual_lines()
   vim.diagnostic.config({ virtual_lines = not enabled, virtual_text = enabled })
 end
 
+vim.keymap.set("n", "<leader>vl", vim.diagnostic.open_float, { desc = "Open diagnostics in floating window" })
 vim.keymap.set("n", "<leader>vv", toggle_virtual_lines, { desc = "Toggle diagnostic virtual lines" })
