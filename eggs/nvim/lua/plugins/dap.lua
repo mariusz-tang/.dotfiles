@@ -32,7 +32,7 @@ return {
         },
       },
       windows = {
-        height = 0.3,
+        size = 0.3,
         terminal = { position = "right" },
       },
     },
