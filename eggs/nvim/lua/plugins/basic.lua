@@ -2,7 +2,7 @@ return {
   {
     "nvim-mini/mini.basics",
     version = false,
-    -- High priority so other plugin specs can override keybinds.
+    -- High priority so other plugin specs can override keymaps.
     priority = 900,
     opts = {
       options = { extra_ui = true },

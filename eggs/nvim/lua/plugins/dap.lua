@@ -4,7 +4,7 @@ return {
     opts = {
       winbar = {
         base_sections = {
-          -- Remove keybind indicators from the labels.
+          -- Remove keymap indicators from the labels.
           breakpoints = {
             label = "Breakpoints",
             short_label = "",

@@ -12,7 +12,12 @@ return {
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
         callback = function(event)
-          local function set_lsp_keybind(key, action, desc, modes)
+          local function toggle_inlay_hints()
+            local enabled = vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf })
+            vim.lsp.inlay_hint.enable(not enabled)
+          end
+
+          local function set_lsp_keymap(key, action, desc, modes)
             modes = modes or { "n" }
             vim.keymap.set(modes, "<leader>l" .. key, action, { buffer = event.buf, desc = desc })
           end
@@ -24,18 +29,15 @@ return {
             return open_picker
           end
 
-          set_lsp_keybind("d", lsp_picker("definition"), "Definition")
-          set_lsp_keybind("R", lsp_picker("references"), "References")
-          set_lsp_keybind("i", lsp_picker("implementation"), "Implementation")
-          set_lsp_keybind("t", lsp_picker("type_definition"), "Type definition")
-          set_lsp_keybind("s", lsp_picker("document_symbol"), "Document symbols")
-          set_lsp_keybind("w", lsp_picker("workspace_symbol"), "Workspace symbols")
-          set_lsp_keybind("r", vim.lsp.buf.rename, "Rename")
-          set_lsp_keybind("a", vim.lsp.buf.code_action, "Code action", { "n", "v" })
-          set_lsp_keybind("h", function()
-            local enabled = vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf })
-            vim.lsp.inlay_hint.enable(not enabled)
-          end, "Toggle inlay hints")
+          set_lsp_keymap("a", vim.lsp.buf.code_action, "Code action", { "n", "v" })
+          set_lsp_keymap("r", vim.lsp.buf.rename, "Rename")
+          set_lsp_keymap("d", lsp_picker("definition"), "Definition")
+          set_lsp_keymap("i", lsp_picker("implementation"), "Implementation")
+          set_lsp_keymap("R", lsp_picker("references"), "References")
+          set_lsp_keymap("s", lsp_picker("document_symbol"), "Document symbols")
+          set_lsp_keymap("t", lsp_picker("type_definition"), "Type definition")
+          set_lsp_keymap("w", lsp_picker("workspace_symbol"), "Workspace symbols")
+          set_lsp_keymap("h", toggle_inlay_hints, "Toggle inlay hints")
         end,
       })
 
