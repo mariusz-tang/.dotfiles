@@ -35,6 +35,7 @@ return {
         size = 0.3,
         terminal = { position = "right" },
       },
+      auto_toggle = true,
     },
     config = function(_, opts)
       local dap = require("dap")
