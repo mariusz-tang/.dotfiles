@@ -19,6 +19,8 @@
 [commit]
 	gpgsign = true
 	verbose = true
+[fetch]
+	writeCommitGraph = true
 [init]
 	defaultBranch = main
 [interactive]
@@ -51,6 +53,9 @@
 [advice]
 	addEmptyPathspec = false
 	detachedHead = false
+
+[rerere]
+	enabled = true
 
 # Colors
 [color "branch"]
