@@ -56,6 +56,7 @@ return {
             "rhai",
             "text",
           }
+          local indent_excluded = "cs"
           for _, language in ipairs(excluded) do
             if filetype == language then
               return
@@ -64,7 +65,9 @@ return {
 
           if pcall(vim.treesitter.start) then
             vim.treesitter.start() -- Syntax highlighting.
-            vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            if filetype ~= indent_excluded then
+              vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end
           else
             print("Could not start treesitter for language '" .. filetype .. "'. Is there a parser installed?")
           end
