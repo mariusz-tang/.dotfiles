@@ -41,7 +41,7 @@
   --toolbar-color: var(--kuro-fg) !important;
 }
 
-#urlbar[open] > #urlbar-background {
+#urlbar[open] > .urlbar-background {
   background-color: var(--kuro-bg) !important;
 }
 
@@ -62,6 +62,7 @@
   }
 
   .urlbarView-favicon {
+    color: var(--kuro-fg) !important;
     background-color: var(--kuro-bg) !important;
   }
 
@@ -72,13 +73,14 @@
 
 .urlbar-input {
   color: var(--kuro-fg) !important;
+  font-weight: 500 !important;
 }
 
 .urlbar-icon {
   color: var(--kuro-gray) !important;
 }
 
-#titlebar:before {
+.zen-toolbar-background:after {
   background-color: var(--kuro-bg) !important;
 }
 
