@@ -3,33 +3,7 @@ return {
     "igorlfs/nvim-dap-view",
     opts = {
       winbar = {
-        base_sections = {
-          -- Remove keymap indicators from the labels.
-          breakpoints = {
-            label = "Breakpoints",
-            short_label = "",
-          },
-          scopes = {
-            label = "Scopes",
-            short_label = "󰂥",
-          },
-          exceptions = {
-            label = "Exceptions",
-            short_label = "󰢃",
-          },
-          watches = {
-            label = "Watches",
-            short_label = "󰛐",
-          },
-          threads = {
-            label = "Threads",
-            short_label = "󱉯",
-          },
-          repl = {
-            label = "REPL",
-            short_label = "󰯃",
-          },
-        },
+        show_keymap_hints = false,
       },
       windows = {
         size = 0.3,
