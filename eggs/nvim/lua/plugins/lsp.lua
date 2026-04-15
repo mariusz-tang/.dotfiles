@@ -31,11 +31,11 @@ return {
 
           set_lsp_keymap("a", vim.lsp.buf.code_action, "Code action", { "n", "v" })
           set_lsp_keymap("r", vim.lsp.buf.rename, "Rename")
-          set_lsp_keymap("d", lsp_picker("definition"), "Definition")
+          set_lsp_keymap("d", vim.lsp.buf.definition, "Definition")
           set_lsp_keymap("i", lsp_picker("implementation"), "Implementation")
           set_lsp_keymap("R", lsp_picker("references"), "References")
           set_lsp_keymap("s", lsp_picker("document_symbol"), "Document symbols")
-          set_lsp_keymap("t", lsp_picker("type_definition"), "Type definition")
+          set_lsp_keymap("t", vim.lsp.buf.type_definition, "Type definition")
           set_lsp_keymap("w", lsp_picker("workspace_symbol"), "Workspace symbols")
           set_lsp_keymap("h", toggle_inlay_hints, "Toggle inlay hints")
         end,
