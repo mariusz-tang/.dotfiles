@@ -54,7 +54,6 @@ export let eggs = #{
             ".": "~/.config/polybar",
             "start-polybar": "~/bin/start-polybar",
         },
-        templates: ["config.ini"],
     },
     ripgrep: "~/.config/ripgrep",
     rofi: #{
