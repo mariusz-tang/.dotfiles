@@ -47,9 +47,6 @@ exec --no-startup-id ssh-agent -D -a ${SSH_AUTH_SOCK} -t 30m
 # IMF
 exec --no-startup-id ibus-daemon -rxRd
 
-# Notifications
-exec --no-startup-id dunst -startup_notification
-
 # Battery state notifications
 exec --no-startup-id ~/.config/i3/scripts/monitor-battery
 
