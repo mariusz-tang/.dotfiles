@@ -71,14 +71,6 @@ export let eggs = #{
         strategy: "merge",
         targets: "~/bin",
     },
-    spicetify: #{
-        strategy: "merge",
-        targets: "~/.config/spicetify",
-        templates: [
-            "Themes/theme/color.ini",
-            "Themes/theme/user.css",
-        ],
-    },
     ssh: #{
         strategy: "merge",
         targets: "~/.ssh",
