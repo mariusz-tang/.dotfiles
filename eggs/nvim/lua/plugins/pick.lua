@@ -7,9 +7,6 @@ return {
       options = {
         content_from_bottom = true,
       },
-      mappings = {
-        refine = "<C-r>",
-      },
     },
     config = function(_, opts)
       require("mini.pick").setup(opts)
