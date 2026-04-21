@@ -36,7 +36,7 @@ export let eggs = #{
         targets: "~/.config/i3",
     },
     nvim: #{
-        main_file: "lua",
+        main_file: ".",
         targets: "~/.config/nvim",
     },
     ohmyposh: "~/.config/ohmyposh",
