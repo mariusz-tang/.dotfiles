@@ -15,15 +15,15 @@ MyLsps = {
 }
 MyConformOpts = {
   -- Format-on-save is off by default.
+  default_format_opts = {
+    lsp_format = "fallback",
+  },
   formatters_by_ft = {
     lua = { "stylua" },
-    python = { "ruff_organize_imports", "ruff_format" },
     zsh = { "beautysh" },
   },
 }
-MyLintersByFileType = {
-  python = { "ruff" },
-}
+MyLintersByFileType = {}
 SetupDap = nil
 
 -- Look for project-local settings.

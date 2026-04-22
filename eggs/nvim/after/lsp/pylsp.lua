@@ -1,11 +1,12 @@
--- Disable linting since we're using ruff instead.
 return {
   settings = {
     pylsp = {
       plugins = {
-        mccabe = { enabled = false },
-        pycodestyle = { enabled = false },
-        pyflakes = { enabled = false },
+        -- Enable pylsp-rope plugin.
+        rope_rename = { enabled = true },
+        -- Rope is noticeably faster than jedi.
+        rope_completion = { enabled = true },
+        jedi_completion = { enabled = false },
       },
     },
   },
