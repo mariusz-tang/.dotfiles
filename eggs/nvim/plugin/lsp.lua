@@ -19,7 +19,7 @@ local workspace_symbols = function()
   require("mini.extra").pickers.lsp({ scope = "workspace_symbol" })
 end
 
-vim.keymap.set("n", "gro", document_symbols, { desc = "Document symbols" })
+vim.keymap.set("n", "grs", document_symbols, { desc = "Document symbols" })
 vim.keymap.set("n", "grw", workspace_symbols, { desc = "Workspace symbols" })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Variable definition" })
 
