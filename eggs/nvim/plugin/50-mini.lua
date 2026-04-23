@@ -122,11 +122,15 @@ local function pick_all_files()
   MiniPick.builtin.cli({ command = { "rg", "--files", "-uuu", "--no-config" } })
 end
 
+local function pick_help()
+  MiniPick.builtin.help({ default_split = "vertical" })
+end
+
 vim.keymap.set("n", "<leader>sF", pick_all_files, { desc = "All files" })
 vim.keymap.set("n", "<leader>sf", MiniPick.builtin.files, { desc = "Files" })
 vim.keymap.set("n", "<leader>sg", MiniPick.builtin.grep_live, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>sG", MiniPick.builtin.grep, { desc = "Static grep" })
-vim.keymap.set("n", "<leader>sh", MiniPick.builtin.help, { desc = "Help" })
+vim.keymap.set("n", "<leader>sh", pick_help, { desc = "Help" })
 
 -- SNIPPETS -------------------------------------------------------------------
 vim.pack.add({ "https://github.com/rafamadriz/friendly-snippets" })
