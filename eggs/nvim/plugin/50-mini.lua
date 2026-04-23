@@ -6,7 +6,6 @@ require("mini.extra").setup()
 
 -- MISCELLANEOUS --------------------------------------------------------------
 require("mini.cursorword").setup()
-require("mini.diff").setup({ view = { style = "number" } })
 require("mini.git").setup()
 require("mini.jump").setup()
 require("mini.move").setup()
@@ -98,6 +97,10 @@ clue.setup({
     { mode = { "n", "x" }, keys = "z" },
   },
 })
+
+-- DIFF -----------------------------------------------------------------------
+require("mini.diff").setup({ view = { style = "number" } })
+vim.keymap.set("n", "<leader>g", MiniDiff.toggle_overlay, { desc = "Toggle diff overlay" })
 
 -- PAIRS ----------------------------------------------------------------------
 require("mini.pairs").setup()
