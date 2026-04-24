@@ -8,8 +8,6 @@ export EDITOR=nvim
 export BROWSER=zen-browser
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export GPG_TTY=$(tty)
+export MANPAGER='nvim +Man!'
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/config
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-
-# Colorize man
-export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
