@@ -13,6 +13,9 @@
 	pager = delta
 	whitespace = error
 
+[credential]
+	helper = cache
+
 # Operations
 [branch]
 	sort = -committerdate
@@ -102,7 +105,6 @@
 	line-numbers-minus-style = 124
 	line-numbers-plus-style = 28
 	line-numbers-zero-style = gray
-
 
 # Url aliases
 [url "git@github.com:"]
