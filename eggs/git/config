@@ -9,7 +9,6 @@
 [core]
 	autocrlf = input
 	compression = 9  # improve network transfer time
-	editor = nvim
 	pager = delta
 	whitespace = error
 
