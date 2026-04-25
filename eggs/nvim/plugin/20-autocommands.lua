@@ -1,6 +1,6 @@
--- Enable highlighting when filetype is specified by modeline.
+-- Enable highlighting when it does not start automatically.
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "gitconfig",
+  pattern = { "gitconfig", "tex" },
   command = "lua vim.treesitter.start()",
 })
 
