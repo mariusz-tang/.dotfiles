@@ -13,8 +13,6 @@ function replace {
     sed 's'${delimiter}${original}${delimiter}${target}${delimiter} --in-place ${file}
 }
 
-hex_color='#[0-9a-f]\{6\}'
-
 # Yolk templates.
 replace 'let theme = "\(dark\|light\)"' 'let theme = "'${theme_name}'"' ~/.config/yolk/theme.rhai
 yolk sync
