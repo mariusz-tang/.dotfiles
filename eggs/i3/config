@@ -38,17 +38,20 @@ gaps inner 20
 popup_during_fullscreen leave_fullscreen
 focus_on_window_activation focus
 
-# Configure display setup
+# Configure display setup.
 exec --no-startup-id display-config
 
 # SSH agent. Key lifetime is 30 minutes.
 exec --no-startup-id ssh-agent -D -a ${SSH_AUTH_SOCK} -t 30m
 
-# IMF
-exec --no-startup-id ibus-daemon -rxRd
+# Input method framework.
+exec --no-startup-id ibus-daemon --replace --xim --daemonize
 
-# Battery state notifications
+# Screen temperature control.
+exec --no-startup-id redshift
+
+# Battery state notifications.
 exec --no-startup-id ~/.config/i3/scripts/monitor-battery
 
-# Startup apps
+# Startup apps.
 exec --no-startup-id discord
