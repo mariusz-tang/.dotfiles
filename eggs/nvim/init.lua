@@ -10,7 +10,7 @@ MyLsps = {
   "jsonls",
   "lua_ls",
   "pylsp",
-  "taplo",
+  "tombi",
   "yamlls",
 }
 MyConformOpts = {

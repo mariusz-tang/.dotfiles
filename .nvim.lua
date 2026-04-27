@@ -4,7 +4,7 @@ MyConformOpts = {
   },
   formatters_by_ft = {
     lua = { "stylua" },
-    toml = { "taplo" },
+    toml = { "tombi" },
     zsh = { "beautysh" },
   },
 }
