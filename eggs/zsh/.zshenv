@@ -1,6 +1,6 @@
 bin_path=~/bin
 dotnet_tools_path=~/.dotnet/tools
-pipx_bin_path=~/.local/bin
+tools_bin_path=~/.local/bin
 npm_globals_path=~/.npm-global/bin
 mkdir --parents $bin_path
 export PATH="${bin_path}:${dotnet_tools_path}:${pipx_bin_path}:${npm_globals_path}:${PATH}"
