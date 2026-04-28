@@ -122,3 +122,8 @@ function y() {
     [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
     rm -f -- "$tmp"
 }
+
+# Automatically activate python virtual environments.
+if [[ -d .venv ]]; then
+    source .venv/bin/activate
+fi
