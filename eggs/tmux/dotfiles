@@ -1,0 +1,12 @@
+#!/usr/bin/zsh
+
+source ~/.config/tmux/sessionutils
+
+tmux has -t dotfiles $1 2> /dev/null
+
+if [[ $? -ne 0 ]]; then
+    make_session dotfiles ~/.config/yolk/ editor nvim
+    make_window shell zsh
+fi
+
+tmux switch-client -t dotfiles

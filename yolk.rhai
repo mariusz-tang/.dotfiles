@@ -77,6 +77,7 @@ export let eggs = #{
         main_file: "tmux.conf",
         targets: #{
             ".": "~/.config/tmux",
+            dotfiles: "~/bin/session/dotfiles",
             sessionizer: "~/bin/sessionizer",
         },
         templates: ["tmux.conf"],
