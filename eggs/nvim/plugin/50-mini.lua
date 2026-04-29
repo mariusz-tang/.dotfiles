@@ -126,16 +126,12 @@ local function pick_help()
   MiniPick.builtin.help({ default_split = "vertical" })
 end
 
-local function pick_manpages()
-  MiniExtra.pickers.manpages({}, { choose_in_vsplit = true })
-end
-
 vim.keymap.set("n", "<leader>sF", pick_all_files, { desc = "All files" })
 vim.keymap.set("n", "<leader>sf", MiniPick.builtin.files, { desc = "Files" })
 vim.keymap.set("n", "<leader>sg", MiniPick.builtin.grep_live, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>sG", MiniPick.builtin.grep, { desc = "Static grep" })
 vim.keymap.set("n", "<leader>sh", pick_help, { desc = "Help" })
-vim.keymap.set("n", "<leader>sm", pick_manpages, { desc = "Manual pages" })
+vim.keymap.set("n", "<leader>sm", MiniExtra.pickers.manpages, { desc = "Manual pages" })
 
 -- SNIPPETS -------------------------------------------------------------------
 vim.pack.add({ "https://github.com/rafamadriz/friendly-snippets" })
