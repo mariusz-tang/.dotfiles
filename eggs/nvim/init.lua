@@ -6,6 +6,7 @@ MyLsps = {
   "clangd",
   "cssls",
   "emmet_language_server",
+  "gh_actions_ls",
   "html",
   "jsonls",
   "lua_ls",
