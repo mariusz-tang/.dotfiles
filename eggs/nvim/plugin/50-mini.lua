@@ -12,7 +12,7 @@ require("mini.move").setup()
 require("mini.notify").setup()
 require("mini.splitjoin").setup()
 require("mini.statusline").setup()
-require("mini.surround").setup()
+require("mini.surround").setup({ n_lines = 40 })
 require("mini.trailspace").setup()
 
 -- AI -------------------------------------------------------------------------
