@@ -10,6 +10,7 @@ MyLsps = {
   "html",
   "jsonls",
   "lua_ls",
+  "neocmake",
   "pylsp",
   "tombi",
   "yamlls",
@@ -20,6 +21,7 @@ MyConformOpts = {
     lsp_format = "fallback",
   },
   formatters_by_ft = {
+    cmake = { "gersemi" },
     lua = { "stylua" },
     zsh = { "beautysh" },
   },
