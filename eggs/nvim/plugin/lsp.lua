@@ -23,6 +23,19 @@ vim.keymap.set("n", "grs", document_symbols, { desc = "Document symbols" })
 vim.keymap.set("n", "grw", workspace_symbols, { desc = "Workspace symbols" })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Variable definition" })
 
+-- C/C++
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "c", "cpp" },
+  callback = function()
+    vim.keymap.set(
+      "n",
+      "<leader>c",
+      "<cmd>LspClangdSwitchSourceHeader<cr>",
+      { desc = "Switch between source and header files" }
+    )
+  end,
+})
+
 -- LAZYDEV --------------------------------------------------------------------
 vim.pack.add({ "https://github.com/folke/lazydev.nvim" })
 require("lazydev").setup({
