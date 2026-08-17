@@ -42,8 +42,8 @@ for i, textobject in pairs(ai_textobjects_map) do
 end
 
 ai.setup({
-  silent = true,
   custom_textobjects = ai_textobjects,
+  n_lines = 200,
 })
 
 -- BASIC ----------------------------------------------------------------------
