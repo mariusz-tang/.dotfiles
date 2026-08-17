@@ -126,5 +126,11 @@ function y() {
 
 # Automatically activate python virtual environments.
 if [[ -d .venv ]]; then
-    source .venv/bin/activate
+    trusted_venvs=~/.config/yolk/eggs/zsh/trusted-venvs.txt
+    if [[ -e $trusted_venvs ]] && rg "^$PWD$" $trusted_venvs --quiet; then
+        source .venv/bin/activate
+    else
+        echo .venv not activated because this directory is not trusted.
+        echo 'Use "echo $PWD >> '$trusted_venvs\" to add it to the trust list.
+    fi
 fi
