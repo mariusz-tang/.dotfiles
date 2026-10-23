@@ -101,7 +101,7 @@ let gruvbox_light = #{
 
 export let base_colors = gruvbox;
 export let colors;
-export let theme = "dark";
+export let theme = io::env("YOLK_THEME", "dark");
 if theme == "light" {
     colors = gruvbox_light;
 } else {

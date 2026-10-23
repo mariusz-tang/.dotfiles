@@ -2,20 +2,8 @@
 
 theme_name=$1
 
-function replace {
-    original=$1
-    target=$2
-    file=$3
-    delimiter=$4
-    if [[ $delimiter == '' ]]; then
-        delimiter='/'
-    fi
-    sed 's'${delimiter}${original}${delimiter}${target}${delimiter} --in-place ${file}
-}
-
 # Yolk templates.
-replace 'let theme = "\(dark\|light\)"' 'let theme = "'${theme_name}'"' ~/.config/yolk/theme.rhai
-yolk sync
+YOLK_THEME=${theme_name} yolk sync
 
 # Background.
 feh --bg-scale $(xdg-user-dir PICTURES)/backgrounds/${theme_name}
