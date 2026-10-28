@@ -28,7 +28,7 @@ case $selected_option in
         ;;
     $discord)
         switch_to_workspace "3: "
-        discord
+        webcord
         ;;
     $music)
         switch_to_workspace "4: "
