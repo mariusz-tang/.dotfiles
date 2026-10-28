@@ -15,15 +15,19 @@ desc = "cd to root of current git repository"
 
 [[mgr.prepend_keymap]]
 on = ["g", "d"]
-run = 'cd ~/downloads'
+run = "cd ~/downloads"
 desc = "Go to downloads"
 
 [[mgr.prepend_keymap]]
 on = ["g", "D"]
-run = 'cd ~/documents'
+run = "cd ~/documents"
 desc = "Go to documents"
 
 [[mgr.prepend_keymap]]
 on = ["g", "p"]
-run = 'cd ~/projects'
+run = "cd ~/projects"
 desc = "Go to projects"
+
+[[mgr.prepend_keymap]]
+on = "<C-n>"
+run = "shell -- dragon-drop -x -i -T %h"
