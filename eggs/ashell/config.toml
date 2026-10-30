@@ -1,0 +1,44 @@
+[animations]
+enabled = true
+
+[appearance]
+scale_factor = 1
+
+success_color = "#b8bb26"  # {< replace_color(colors.brightgreen) >}
+warning_color = "#fe8019"  # {< replace_color(colors.brightorange) >}
+danger_color = "#fb4934"  # {< replace_color(colors.brightred) >}
+text_color = "#fbf1c7"  # {< replace_color(colors.fg) >}
+
+workspace_colors = ["#d3869b"]  # {< replace_color(colors.brightmagenta) >}
+
+[appearance.primary_color]
+base = "#fbf1c7"  # {< replace_color(colors.fg) >}
+text = "#282828"  # {< replace_color(colors.bg) >}
+
+[appearance.background_color]
+base = "#282828"  # {< replace_color(colors.bg) >}
+weaker = "#3c3836"  # {< replace_color(colors.bg1) >}
+neutral = "#504945"  # {< replace_color(colors.bg2) >}
+strong = "#665c54"  # {< replace_color(colors.bg3) >}
+strongest = "#7c6f64"  # {< replace_color(colors.bg4) >}
+text = "#fbf1c7"  # {< replace_color(colors.fg) >}
+
+[osd]
+enabled = true
+show_volume_percentage = true
+show_brightness_percentage = true
+
+[modules]
+left = ["Workspaces"]
+center = ["Tempo", "Notifications", "Privacy"]
+right = [["MediaPlayer", "Settings"]]
+
+[media_player]
+menu_visualizer = true
+visualizer_framerate = 144
+
+[settings]
+battery_hide_when_full = true
+
+[workspaces]
+visibility_mode = "MonitorSpecific"

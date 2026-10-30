@@ -8,33 +8,26 @@ music='[m]usic'
 files='[f]iles'
 selected_option=$(rofi-menu "frequently used applications" $terminal $browser $steam $discord $music $files)
 
-function switch_to_workspace {
-    local workpace_number=$1
-    i3-msg "workspace --no-auto-back-and-forth number $workpace_number"
-}
-
 case $selected_option in
     $terminal)
-        switch_to_workspace "1: "
-        alacritty -e tmux new-session -A -s default
+        hyprctl --batch eval "hl.config({ binds = { workspace_back_and_forth = 0 }});" \
+            dispatch "hl.dsp.focus({ workspace = 1 });" \
+            dispatch 'hl.dsp.exec_cmd("footclient tmux new-session -A -s default");' \
+            eval "hl.config({ binds = { workspace_back_and_forth = 1 }})"
         ;;
     $browser)
-        switch_to_workspace "2: 󰈹"
         zen-browser
         ;;
     $steam)
-        switch_to_workspace "5: "
         steam
         ;;
     $discord)
-        switch_to_workspace "3: "
         webcord
         ;;
     $music)
-        switch_to_workspace "4: "
         spotify-launcher
         ;;
     $files)
-        alacritty -e yazi
+        footclient yazi
         ;;
 esac

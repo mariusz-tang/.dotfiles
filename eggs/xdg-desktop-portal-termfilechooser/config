@@ -1,2 +1,2 @@
 [filechooser]
-env=TERMCMD=alacritty -e
+env=TERMCMD=footclient

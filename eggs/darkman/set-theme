@@ -6,10 +6,16 @@ theme_name=$1
 YOLK_THEME=${theme_name} yolk sync
 
 # Background.
-feh --bg-scale $(xdg-user-dir PICTURES)/backgrounds/${theme_name}
+# The comma is necessary to omit the monitor argument.
+hyprctl hyprpaper wallpaper , ~/pictures/backgrounds/${theme_name}
 
-# Dunst.
-dunstctl reload
+# Foot does not support reloading the config, however it does support theme
+# switching by way of user signals.
+if [[ $theme_name = "dark" ]]; then
+    pkill --signal USR1 foot
+else
+    pkill --signal USR2 foot
+fi
 
 # Tmux.
 tmux source-file ~/.config/tmux/tmux.conf

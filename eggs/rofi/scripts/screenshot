@@ -10,20 +10,27 @@ selected_option=$(rofi-menu screenshot $everything $window $display $rectangle $
 # Wait for rofi window closing animation to finish.
 sleep 0.16
 
+timestamp-filename() {
+    echo $(date +%Y-%m-%d_%H-%M-%S).png
+}
+
 case $selected_option in
     $everything)
-        ksnip --fullscreen
+        grim - | tee ~/pictures/screenshots/$(timestamp-filename) | wl-copy
         ;;
     $window)
-        ksnip --active
+        active_window=$(hyprctl -j activewindow | jq -r '.["stableId"]')
+        grim -T $active_window - | tee ~/pictures/screenshots/$(timestamp-filename) | wl-copy
         ;;
     $display)
-        ksnip --current
+        active_monitor=$(hyprctl -j activeworkspace | jq -r '.["monitor"]')
+        grim -o $active_monitor - | tee ~/pictures/screenshots/$(timestamp-filename) | wl-copy
         ;;
     $rectangle)
-        ksnip --rectarea
+        # grim -g "$(slurp)" - | swappy -f -
+        grim -g "$(slurp)" - | tee ~/pictures/screenshots/$(timestamp-filename) | wl-copy
         ;;
     $colorpicker)
-        xcolor --selection
+        hyprpicker --autocopy --lowercase-hex --radius=150
         ;;
 esac

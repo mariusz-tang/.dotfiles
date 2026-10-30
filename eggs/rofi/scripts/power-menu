@@ -3,7 +3,8 @@
 poweroff='[p]oweroff'
 reboot='[r]eboot'
 lock='[l]ock'
-selected_option=$(rofi-menu "power options" $poweroff $reboot $lock)
+exit="[e]xit hyprland"
+selected_option=$(rofi-menu "power options" $poweroff $reboot $lock $exit)
 
 case $selected_option in
     $poweroff)
@@ -15,6 +16,9 @@ case $selected_option in
     $lock)
         # Allow the rofi window to disappear before locking.
         sleep 0.1
-        lock
+        hyprlock
+        ;;
+    $exit)
+        command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'
         ;;
 esac

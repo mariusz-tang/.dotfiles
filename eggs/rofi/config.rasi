@@ -1,7 +1,7 @@
 @theme "common"
 
 configuration {
-    terminal: "alacritty";
+    terminal: "footclient";
     sort: true;
     sorting-method: "fzf";
     display-run: " run";
@@ -17,7 +17,7 @@ input-box {
 }
 
 inputbar {
-    padding: 0 0 0 0.5em;
+    padding: 0.5em 0 0 0.5em;
     spacing: 0;
     children: [prompt, textbox-prompt-sep, entry];
 }

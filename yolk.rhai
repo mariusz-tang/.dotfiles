@@ -5,10 +5,9 @@ export let colors = theme::colors;
 export let theme_name = theme::theme;
 
 export let eggs = #{
-    alacritty: #{
-        main_file: "alacritty.toml",
-        targets: "~/.config/alacritty",
-        templates: ["alacritty.toml"],
+    ashell: #{
+        targets: "~/.config/ashell",
+        templates: ["config.toml"],
     },
     bat: "~/.config/bat",
     darkman: #{
@@ -18,9 +17,9 @@ export let eggs = #{
             "set-theme": "~/.local/share/darkman/set-theme",
         },
     },
-    dunst: #{
-        targets: "~/.config/dunst",
-        templates: ["dunstrc"],
+    foot: #{
+        targets: "~/.config/foot",
+        templates: ["foot.ini"],
     },
     git: #{
         main_file: "config",
@@ -31,29 +30,17 @@ export let eggs = #{
         strategy: "merge",
         targets: "~/.gnupg",
     },
-    i3: #{
-        main_file: "config",
-        targets: "~/.config/i3",
+    hypr: #{
+        targets: "~/.config/hypr",
+        templates: [
+            "hyprlock.conf",
+            "hyprpaper.conf",
+        ],
     },
     nvim: #{
         targets: "~/.config/nvim",
     },
     ohmyposh: "~/.config/ohmyposh",
-    picom: #{
-        main_file: "picom.conf",
-        targets: #{
-            ".": "~/.config/picom",
-            "toggle-picom": "~/bin/toggle-picom",
-        },
-        templates: ["picom.conf"],
-    },
-    polybar: #{
-        main_file: "config.ini",
-        targets: #{
-            ".": "~/.config/polybar",
-            "start-polybar": "~/bin/start-polybar",
-        },
-    },
     ripgrep: "~/.config/ripgrep",
     rofi: #{
         main_file: "scripts",
@@ -64,14 +51,12 @@ export let eggs = #{
         },
         templates: ["common.rasi"],
     },
-    scripts: #{
-        // Miscellaneous scripts that don't belong in any other egg.
-        strategy: "merge",
-        targets: "~/bin",
-    },
     ssh: #{
         strategy: "merge",
         targets: "~/.ssh",
+    },
+    swappy: #{
+        targets: "~/.config/swappy",
     },
     tmux: #{
         main_file: "tmux.conf",

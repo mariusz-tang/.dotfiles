@@ -1,26 +1,19 @@
 #!/usr/bin/zsh
 
-picom='[p]icom'
-polybar='p[o]lybar'
-autorandr='[a]utorandr'
 darkman='[d]arkman'
-feh='[f]eh'
-selected_option=$(rofi-menu "utilities" $picom $polybar $autorandr $darkman $feh)
+theme='[t]heme'
+swappy='[a]nnotate last screenshot'
+selected_option=$(rofi-menu "utilities" $darkman $theme $swappy)
 
 case $selected_option in
-    $picom)
-        toggle-picom
-        ;;
-    $polybar)
-        start-polybar
-        ;;
-    $autorandr)
-        display-config
-        ;;
     $darkman)
         darkman toggle
         ;;
-    $feh)
-        ~/.fehbg
+    $theme)
+        # Reapply the current theme. Should be used after executing `yolk git` commands.
+        ~/.config/yolk/eggs/darkman/set-theme $(darkman get)
+        ;;
+    $swappy)
+        wl-paste | swappy -f -
         ;;
 esac
