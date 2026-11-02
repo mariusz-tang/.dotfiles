@@ -188,9 +188,11 @@ hl.bind(mod .. " + print", hl.dsp.exec_cmd("screenshot; wl-paste | swappy -f -")
 
 hl.bind(mod .. " + F", hl.dsp.window.fullscreen())
 
--- Move focus with mainMod + arrow keys
+-- Move focus and windows with mainMod + J/K
 hl.bind(mod .. " + J", hl.dsp.focus({ direction = "left" }))
 hl.bind(mod .. " + K", hl.dsp.focus({ direction = "right" }))
+hl.bind(mod .. " + SHIFT + J", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mod .. " + SHIFT + K", hl.dsp.window.move({ direction = "right" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
