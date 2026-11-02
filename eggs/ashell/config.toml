@@ -9,7 +9,10 @@ warning_color = "#fe8019"  # {< replace_color(colors.brightorange) >}
 danger_color = "#fb4934"  # {< replace_color(colors.brightred) >}
 text_color = "#fbf1c7"  # {< replace_color(colors.fg) >}
 
-workspace_colors = ["#d3869b"]  # {< replace_color(colors.brightmagenta) >}
+workspace_colors = [
+  "#d3869b",  # {< replace_color(colors.brightmagenta) >}
+  "#fabd2f",  # {< replace_color(colors.brightyellow) >}
+]
 
 [appearance.primary_color]
 base = "#fbf1c7"  # {< replace_color(colors.fg) >}
@@ -41,4 +44,5 @@ visualizer_framerate = 144
 battery_hide_when_full = true
 
 [workspaces]
+workspace_names = ["", "󰈹", "", "", ""]
 visibility_mode = "MonitorSpecific"
