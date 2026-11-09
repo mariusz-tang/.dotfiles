@@ -27,6 +27,7 @@ end)
 -- See https://wiki.hypr.land/configuring/core/environment-variables/
 hl.env("XCURSOR_SIZE", "32")
 hl.env("HYPRCURSOR_SIZE", "32")
+hl.env("HYPRLAND_NO_RT", "1")
 
 -- Use columns only so windows can always be navigated with left and right (J and K).
 hl.layout.register("columns", {
