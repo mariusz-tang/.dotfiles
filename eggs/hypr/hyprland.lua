@@ -215,6 +215,39 @@ hl.bind(mod .. " + SHIFT + N", function()
   end
 end)
 
+-- Swap positions and assignments for workspaces 2 (browser) and 3 (discord).
+local workspacesSwapped = false
+hl.bind(mod .. " + N", function()
+  local monitorA = "HDMI-A-1"
+  local monitorB = "eDP-1"
+  if workspacesSwapped then
+    monitorA = "eDP-1"
+    monitorB = "HDMI-A-1"
+  end
+  workspacesSwapped = not workspacesSwapped
+
+  -- Switch workspace assignments.
+  hl.workspace_rule({ workspace = "2", monitor = monitorA })
+  hl.workspace_rule({ workspace = "3", monitor = monitorB })
+
+  -- Switch workspace positions and focus the previously focused workspace.
+  local activeWorkspace = hl.get_active_workspace().name
+
+  -- Avoid unwanted interactions with the `workspace_back_and_forth` setting.
+  if activeWorkspace ~= "2" then
+    hl.dispatch(hl.dsp.focus({ workspace = "2" }))
+  end
+  hl.dispatch(hl.dsp.workspace.move({ workspace = "2", monitor = monitorA }))
+
+  hl.dispatch(hl.dsp.focus({ workspace = "3" }))
+  hl.dispatch(hl.dsp.workspace.move({ workspace = "3", monitor = monitorB }))
+
+  -- Avoid unwanted interactions with the `workspace_back_and_forth` setting.
+  if activeWorkspace ~= "3" then
+    hl.dispatch(hl.dsp.focus({ workspace = activeWorkspace }))
+  end
+end)
+
 -- Move/resize windows with mainMod + LMB/RMB and dragging.
 hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
