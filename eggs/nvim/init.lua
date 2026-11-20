@@ -12,6 +12,7 @@ MyLsps = {
   "lua_ls",
   "neocmake",
   "pylsp",
+  "ts_ls",
   "tombi",
   "yamlls",
 }
